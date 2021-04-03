@@ -1,0 +1,26 @@
+.catalog {
+  &__title {
+    font-family: @special_font;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    color: @basic_black;
+    text-align: left;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    padding-top: 13px;
+    padding-bottom: 15px;
+    border-top: 1px solid @special_grey-6;
+  }
+
+  &__item:last-child {
+    border-bottom: 1px solid @special_grey-6;
+  }
+}
