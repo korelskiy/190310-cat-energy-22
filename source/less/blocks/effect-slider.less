@@ -14,4 +14,26 @@
     text-transform: uppercase;
     border: none;
   }
+
+  &__control {
+    display: flex;
+    justify-content: center;
+    padding-top: 23px;
+    padding-bottom: 25px;
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: @special_grey-2;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic_white;
+    padding-right: 110px;
+  }
 }

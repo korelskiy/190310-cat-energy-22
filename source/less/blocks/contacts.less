@@ -1,5 +1,10 @@
 .contacts {
   &__box {
+    padding: 0 20px;
+    min-height: 114px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: @basic_white;
   }
 
@@ -11,7 +16,6 @@
     line-height: 18px;
     color: @special_black;
     text-align: left;
-    padding-bottom: 28px;
     text-transform: uppercase;
   }
 
@@ -22,5 +26,27 @@
     font-size: 14px;
     line-height: 20px;
     color: @special_dark-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__box {
+      padding: 0 30px;
+      min-height: 201px;
+    }
+
+    &__title {
+      margin-left: 71px;
+    }
+
+    &__address {
+      padding-right: 72px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__box {
+      width: 570px;
+      padding: 0 110px;
+    }
   }
 }
