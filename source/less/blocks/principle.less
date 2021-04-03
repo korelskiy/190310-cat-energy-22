@@ -1,5 +1,6 @@
 .principle {
-  height: 447px;
+  padding: 0 20px;
+  min-height: 447px;
 
   &__title {
     margin: 0;
@@ -14,8 +15,42 @@
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
     margin: 0;
-    padding: 0 0 20px 0;
+    padding: 0;
     list-style: none;
+  }
+
+  &__item {
+    min-height: 60px;
+    padding-bottom: 20px;
+  }
+
+  &__item:last-child {
+    padding-bottom: 0;
+  }
+
+  &__description {
+    margin: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 60px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+
+    &__list {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 80px;
+    }
   }
 }

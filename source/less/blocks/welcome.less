@@ -2,7 +2,6 @@
   padding-bottom: 22px;
 
   &__wrapper {
-    width: 320px;
     height: 302px;
     background-color: @basic_green;
     background-image: url("../img/bg_cat.jpg");
@@ -33,12 +32,45 @@
     text-align: center;
   }
 
+  &__image {
+    display: block;
+    margin: 0 auto;
+    margin-top: -135px;
+  }
+
   &__buttom {
-    display: inline-block;
+    display: block;
     box-sizing: border-box;
+    margin: 0 auto;
     width: 280px;
     height: 40px;
     line-height: 40px;
     font-size: 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__wrapper {
+      background-color: @basic_white;
+      background-image: none;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &__title {
+      color: @basic_black;
+      text-align: left;
+    }
+
+    &__text {
+      color: @basic_black;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__wrapper {
+      padding-left: 110px;
+      padding-right: 110px;
+    }
   }
 }

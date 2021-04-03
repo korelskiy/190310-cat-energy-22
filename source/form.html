@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -16,13 +17,13 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="index.html">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item main-nav__item--active">
-              <a href="#">Подбор программы</a>
+              <a class="main-nav__link" href="#">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -122,35 +123,37 @@
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__wrapper">
           <div class="contacts__box">
-            <p class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</p>
-            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <p class="contacts__title">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
+            <p class="contacts__address">ул. Большая<br> Конюшенная, д. 19/8<br> Санкт-Петербург</p>
           </div>
           <img class="contacts__map" src="img/contacts__map.jpg" width="320" height="362" alt="Наше местоположение на карте">
         </div>
       </div>
-      <div class="page-footer__logo logo-footer">
-        <a href="index.html">
-          <img class="logo-footer__image" src="img/page-footer__logo-image.svg" width="128" height="24" alt="Логотип Cat Energy">
-        </a>
-      </div>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/">Мы в Инстаграме</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/">Мы в Фейсбуке</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <span class="copyright__text">HTML Academy</span>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__logo" src="img/copyright__logo.svg" alt="Онлайн‑курс: HTML и CSS. Адаптивная вёрстка и автоматизация">
-        </a>
+      <div class="page-footer__inner-box">
+        <div class="page-footer__logo logo-footer">
+          <a class="logo-footer__link" href="#">
+            <img class="logo-footer__image" src="img/page-footer__logo-image.svg" width="128" height="24" alt="Логотип Cat Energy">
+          </a>
+        </div>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/">Мы в Инстаграме</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/">Мы в Фейсбуке</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <span class="copyright__text">HTML Academy</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="copyright__logo" src="img/copyright__logo.svg" alt="Онлайн‑курс: HTML и CSS. Адаптивная вёрстка и автоматизация">
+          </a>
+        </div>
       </div>
     </footer>
   </body>

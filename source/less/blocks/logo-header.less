@@ -1,4 +1,17 @@
 .logo-header {
   height: 66px;
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    height: 78px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 216px;
+    width: 202px;
+  }
 }
