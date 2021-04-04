@@ -1,4 +1,6 @@
 .cat-info {
+  padding: 0;
+
   &__list {
     margin: 0;
     padding: 0;
@@ -6,10 +8,18 @@
   }
 
   &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-bottom: 14px;
   }
 
+  &__item:last-child {
+    padding-bottom: 24px;
+  }
+
   &__text {
+    padding-right: 15px;
     font-family: @special_font;
     font-weight: 400;
     font-size: 16px;
@@ -20,6 +30,8 @@
   }
 
   &__field {
+    flex: 1;
+    padding-left: 15px;
     height: 45px;
     border: 1px solid @special_grey-4;
     font-family: @special_font;
@@ -28,5 +40,29 @@
     line-height: 18px;
     color: @special_dark-grey;
     text-transform: uppercase;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__field {
+      margin-right: 36px;
+    }
+
+    &__item {
+      padding-bottom: 20px;
+    }
+
+    &__item:last-child {
+      padding-bottom: 72px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__field {
+      margin-right: 0;
+    }
+
+    &__item:last-child {
+      padding-bottom: 0;
+    }
   }
 }
