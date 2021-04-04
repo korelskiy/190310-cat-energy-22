@@ -1,4 +1,6 @@
-.page-main {
+.page-main-catalog {
+  padding: 0 20px;
+
   &__title {
     margin: 0;
     font-family: @special_font;
@@ -9,5 +11,14 @@
     text-align: left;
     padding-top: 27px;
     padding-bottom: 37px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 30px;
+    padding-left: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
   }
 }

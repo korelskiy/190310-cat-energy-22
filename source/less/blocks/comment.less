@@ -1,5 +1,6 @@
 .comment {
   &__title {
+    margin-top: 23px;
     font-family: @special_font;
     font-weight: 400;
     font-size: 24px;
@@ -9,18 +10,33 @@
   }
 
   &__text {
-    margin-top: 37px;
-    padding-top: 9px;
+    padding-top: 10px;
     padding-left: 15px;
-    min-width: 280px;
+    box-sizing: border-box;
+    margin: 37px auto 0 auto;
+    width: 100%;
     min-height: 150px;
-    resize: none;
     font-family: @special_font;
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
+    resize: none;
+    overflow: auto;
     color: @special_dark-grey;
     text-transform: uppercase;
     border: 1px solid @special_grey-4;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 36px;
+
+    &__text {
+      min-height: 174px;
+      margin-top: 76px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
   }
 }

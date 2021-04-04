@@ -28,6 +28,12 @@
     color: @special_dark-grey;
   }
 
+  &__map {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+
   @media (min-width: @tablet-width) {
     &__box {
       padding: 0 30px;
@@ -40,6 +46,10 @@
 
     &__address {
       padding-right: 72px;
+    }
+
+    &__map {
+      height: 400px;
     }
   }
 

@@ -1,10 +1,11 @@
 .programm {
-  padding-top: 22px;
-  padding-bottom: 19px;
+  padding: 22px 0 0 0;
 
   &__list {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
     list-style: none;
   }
 
@@ -13,7 +14,7 @@
   }
 
   &__item:last-child {
-    padding-bottom: 0;
+    padding-bottom: 22px;
   }
 
   &__text {
@@ -23,5 +24,26 @@
     line-height: 18px;
     color: @special_dark-grey-2;
     text-transform: uppercase;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__field {
+      margin-right: 36px;
+    }
+
+    &__item {
+      padding-bottom: 13px;
+      margin-left: 28px;
+    }
+
+    &__item:last-child {
+      padding-bottom: 25px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__field {
+      margin-right: 0;
+    }
   }
 }
