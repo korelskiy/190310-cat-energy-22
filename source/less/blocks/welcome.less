@@ -1,8 +1,7 @@
-.welcome{
+.welcome {
   padding-bottom: 22px;
 
-  &__wrapper{
-    width: 320px;
+  &__wrapper {
     height: 302px;
     background-color: @basic_green;
     background-image: url("../img/bg_cat.jpg");
@@ -10,7 +9,7 @@
     background-repeat: no-repeat;
   }
 
-  &__title{
+  &__title {
     margin: 0;
     font-family: @special_font;
     font-weight: 400;
@@ -22,7 +21,7 @@
     padding-bottom: 25px;
   }
 
-  &__text{
+  &__text {
     margin: 0;
     font-family: @special_font;
     font-weight: 400;
@@ -33,9 +32,45 @@
     text-align: center;
   }
 
-  &__buttom{
-    display: inline-block;
+  &__image {
+    display: block;
+    margin: 0 auto;
+    margin-top: -135px;
+  }
+
+  &__buttom {
+    display: block;
     box-sizing: border-box;
-    line-height:40px;
+    margin: 0 auto;
+    width: 280px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__wrapper {
+      background-color: @basic_white;
+      background-image: none;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &__title {
+      color: @basic_black;
+      text-align: left;
+    }
+
+    &__text {
+      color: @basic_black;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__wrapper {
+      padding-left: 110px;
+      padding-right: 110px;
+    }
   }
 }

@@ -1,0 +1,42 @@
+.comment {
+  &__title {
+    margin-top: 23px;
+    font-family: @special_font;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+    color: @basic_black;
+    text-align: left;
+  }
+
+  &__text {
+    padding-top: 10px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    margin: 37px auto 0 auto;
+    width: 100%;
+    min-height: 150px;
+    font-family: @special_font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    resize: none;
+    overflow: auto;
+    color: @special_dark-grey;
+    text-transform: uppercase;
+    border: 1px solid @special_grey-4;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 36px;
+
+    &__text {
+      min-height: 174px;
+      margin-top: 76px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
+}

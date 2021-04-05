@@ -1,7 +1,11 @@
-.example{
+.example {
   background-color: @special_grey-2;
 
-  &__title{
+  &__wrapper {
+    padding: 0 20px;
+  }
+
+  &__title {
     margin: 0;
     font-family: @special_font;
     font-weight: 400;
@@ -11,15 +15,36 @@
     text-align: left;
     padding-top: 27px;
     padding-bottom: 33px;
-    }
-
-  &__stats{
-    padding: 0;
-    list-style: none;
   }
 
-  &__example__stats-value {
+  &__description {
     margin: 0;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+    margin-top: 25px;
+    margin-bottom: 26px;
+  }
+
+  &__stats-value {
+    margin: 0;
+    width: 124px;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: @special_font;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    color: @basic_black;
+  }
+
+  &__text span {
     font-family: @basic_font;
     font-weight: 400;
     font-size: 12px;
@@ -27,7 +52,7 @@
     color: @special_dark-grey;
   }
 
-  &__cost{
+  &__cost {
     margin: 0;
     font-family: @special_font;
     font-weight: 400;
@@ -36,5 +61,51 @@
     color: @basic_black;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic_white;
+
+    &__wrapper {
+      padding: 0 30px;
+    }
+
+    &__stat-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 54px;
+    }
+
+    &__stats {
+      margin: 0;
+    }
+
+    &__stats-value {
+      width: 162px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+
+    &__wrapper {
+      padding: 0 110px;
+    }
+
+    &__stats-value {
+      width: 162px;
+    }
+
+    &__stat-block {
+      display: block;
+    }
+
+    &__stats {
+      justify-content: left;
+      padding-bottom: 55px;
+    }
   }
 }

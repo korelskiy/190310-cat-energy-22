@@ -1,11 +1,30 @@
-.social{
+.social {
+  padding: 0 20px;
 
-  &__list{
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
     padding: 0;
     list-style: none;
+    border-bottom: 1px solid @special_grey-3;
+    border-top: 1px solid @special_grey-3;
+    text-align: center;
   }
 
-  &__link{
+  &__item {
+    padding: 25px 0;
+  }
+
+  &__link {
+    color: @special_grey;
     text-decoration: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__list {
+      border: none;
+    }
   }
 }

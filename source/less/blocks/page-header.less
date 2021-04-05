@@ -1,4 +1,19 @@
 .page-header {
-  box-sizing: border-box;
-  padding-top: 11px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 110px;
+  }
 }

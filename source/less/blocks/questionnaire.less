@@ -1,0 +1,92 @@
+.questionnaire {
+  &__info {
+    margin: 0;
+    font-family: @special_font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: @basic_black;
+    text-transform: uppercase;
+    text-align: left;
+    padding-bottom: 39px;
+  }
+
+  &__cat-info {
+    border: none;
+  }
+
+  &__programm {
+    border-top: 1px solid @special_grey-3;
+    border-bottom: 1px solid @special_grey-3;
+    border-left: none;
+    border-right: none;
+  }
+
+  &__owner-contacts {
+    padding: 0;
+    border: none;
+  }
+
+  &__addition {
+    padding: 0;
+    border: none;
+  }
+
+  &__button {
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 280px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    border: none;
+  }
+
+  &__footnote {
+    margin-top: 21px;
+    margin-bottom: 32px;
+    color: @basic_black;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__programm {
+      border: 1px solid @special_grey-3;
+      margin-right: 36px;
+    }
+
+    &__footet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 60px;
+      align-items: center;
+    }
+
+    &__button {
+      width: 100%;
+    }
+
+    &__footnote {
+      text-align: left;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 80px;
+    }
+
+    &__programm {
+      margin-right: 0;
+    }
+
+    &__footet {
+      column-gap: 80px;
+    }
+  }
+}
