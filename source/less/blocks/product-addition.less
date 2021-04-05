@@ -12,6 +12,11 @@
     text-transform: uppercase;
   }
 
+  &__description {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__volume {
     line-height: 14px;
   }
@@ -28,5 +33,41 @@
     height: 40px;
     font-size: 16px;
     line-height: 40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    margin: 20px 38px;
+
+    &__button {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      width: auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 80px;
+    align-items: center;
+    margin: 0;
+
+    &__button {
+      grid-column-start: 3;
+      grid-column-end: 4;
+      width: auto;
+      margin: 0;
+    }
+
+    &__title {
+      padding: 0;
+    }
+
+    &__description {
+      margin: 0;
+    }
   }
 }

@@ -1,4 +1,8 @@
 .catalog-addition {
+  &__wrapper {
+    padding: 0 20px;
+  }
+
   &__title {
     margin: 0;
     padding-top: 25px;
@@ -12,6 +16,8 @@
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -28,10 +34,12 @@
   }
 
   &__promo {
-    width: 280px;
-    height: 289px;
+    width: auto;
+    margin: 0 20px;
     background-color: @basic_green;
     background-image: url("../img/bg_promo.jpg");
+    background-size: 100%;
+    background-position: center;
   }
 
   &__promo-text {
@@ -41,5 +49,48 @@
     font-size: 16px;
     line-height: 20px;
     color: @basic_white;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__wrapper {
+      padding: 0 30px;
+    }
+
+    &__promo {
+      margin: 0 30px;
+    }
+
+    &__title {
+      padding-left: 30px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    margin-bottom: 86px;
+
+    &__wrapper {
+      padding: 0 0 0 110px;
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+
+    &__item {
+      padding: 15px 0;
+    }
+
+    &__promo {
+      margin: 0;
+    }
+
+    &__promo-text {
+      padding: 0;
+    }
+
+    &__title {
+      padding-left: 110px;
+    }
   }
 }
