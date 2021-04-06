@@ -7,8 +7,40 @@
   }
 
   &__logo-text {
-    margin-right: 18px;
+    margin-right: 11px;
     margin-top: 4px;
+  }
+
+  &__burger {
+    display: block;
+    cursor: pointer;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-color: @basic_white;
+  }
+
+  &__burger--open::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    right: 20px;
+    top: 23px;
+    background-image: url("../img/icon/burger_open.svg");
+    background-position: center;
+  }
+
+  &__burger--close::before {
+    content: "";
+    background-color: @basic_white;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 22px;
+    top: 21px;
+    background-image: url("../img/icon/burger_close.svg");
+    background-position: center;
   }
 
   @media (min-width: @tablet-width) {
