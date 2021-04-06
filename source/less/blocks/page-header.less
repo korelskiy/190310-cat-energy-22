@@ -1,7 +1,15 @@
 .page-header {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px 12px 20px;
+  }
+
+  &__logo-text {
+    margin-right: 18px;
+    margin-top: 4px;
+  }
 
   @media (min-width: @tablet-width) {
     flex-direction: row;

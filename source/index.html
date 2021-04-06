@@ -8,12 +8,16 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo logo-header" href="#">
-        <img class="logo-header__image" src="img/logo-header__image.svg" width="33" height="37" alt="Логотип Cat Energy">
-        <img class="logo-header__text" src="img/logo-header__text.svg" width="101" height="18" alt="Текстовый логотип Cat Energy">
-      </a>
+      <div class="page-header__top">
+        <a class="page-header__link" href="#">
+          <img class="page-header__logo" src="img/logo-header__image.svg" width="33" height="37" alt="Логотип Cat Energy">
+        </a>
+        <a class="page-header__link" href="#">
+          <img class="page-header__logo-text" src="img/logo-header__text.svg" width="101" height="18" alt="Текстовый логотип Cat Energy">
+        </a>
+        <button class="page-header__burger" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--active">
@@ -85,16 +89,17 @@
           <p class="example__description">
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
-          <div class="example__stat-block">
+          <div class="example__stats-block">
             <ul class="example__stats">
               <li class="example__stats-value">
-                <p class="example__text">
-                  5 КГ <span>снижение<br> веса</span>
+                <p class="example__text">5 КГ <br>
+                  <span class="example__desc">снижение<br> веса</span>
                 </p>
+
               </li>
               <li class="example__stats-value">
-                <p class="example__text">
-                  60 дней <span>затрачено <br>времени</span>
+                <p class="example__text">60 дней<br>
+                  <span class="example__desc">затрачено <br>времени</span>
                 </p>
               </li>
             </ul>
