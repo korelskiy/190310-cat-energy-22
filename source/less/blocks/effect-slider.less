@@ -11,15 +11,38 @@
     font-size: 16px;
     line-height: 20px;
     color: @basic_black;
+    background-color: @special_grey-2;
     text-transform: uppercase;
     border: none;
+    margin: 0 19px;
   }
 
   &__control {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-top: 23px;
     padding-bottom: 25px;
+  }
+
+  &__range {
+    box-sizing: border-box;
+    width: 84px;
+    height: 14px;
+    background-color: @basic_white;
+    border: 1px solid @special_grey-5;
+    border-radius: 6px;
+    padding: 3px 5px;
+    cursor: pointer;
+  }
+
+  &__toggle {
+    display: block;
+    width: 35px;
+    height: 6px;
+    background-color: @basic_green;
+    border-radius: 10px;
+    border: none;
   }
 
   &__img {
