@@ -7,10 +7,15 @@
     padding: 0;
     list-style: none;
     text-align: center;
+    animation: bounce 0.5s;
   }
 
   &__item {
     border-top: 1px solid @special_grey-7;
+  }
+
+  &__item:last-child {
+    border-bottom: 1px solid @special_grey-7;
   }
 
   &__link {
@@ -23,6 +28,11 @@
     text-transform: uppercase;
   }
 
+  @media (max-width: @mobile-width-only) {
+    &--closed &__list {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     &__list {
@@ -30,6 +40,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      animation: none;
     }
 
     &__toggle {
@@ -37,6 +48,10 @@
     }
 
     &__item {
+      border: none;
+    }
+
+    &__item:last-child {
       border: none;
     }
   }

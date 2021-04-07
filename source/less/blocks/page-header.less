@@ -20,7 +20,7 @@
     background-color: @basic_white;
   }
 
-  &__burger--open::before {
+  &__burger::before {
     content: "";
     position: absolute;
     width: 24px;
@@ -31,7 +31,7 @@
     background-position: center;
   }
 
-  &__burger--close::before {
+  &__burger--closed::before {
     content: "";
     background-color: @basic_white;
     position: absolute;
@@ -48,6 +48,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+
+    &__burger {
+      display: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
