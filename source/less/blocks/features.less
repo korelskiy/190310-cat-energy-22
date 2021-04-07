@@ -49,17 +49,34 @@
     padding: 19px 0 22px 0;
     margin: 0 20px;
     border-top: 1px solid @special_grey-3;
-  }
 
-  &__link::after {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icon/arrow.svg");
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 12px;
-    margin-left: 16px;
-    margin-top: 2px;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon/arrow.svg");
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 12px;
+      margin-left: 16px;
+      margin-top: 2px;
+    }
+
+    &:hover {
+      &::after {
+        background-image: url("../img/icon/arrow_hover.svg");
+        width: 32px;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+
+      &::after {
+        background-image: url("../img/icon/arrow_hover.svg");
+        width: 32px;
+        opacity: 0.3;
+      }
+    }
   }
 
   &__description {

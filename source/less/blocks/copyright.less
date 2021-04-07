@@ -1,7 +1,4 @@
 .copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 23px 0 13px 0;
   border-top: 1px solid @special_grey-3;
   margin: 0 20px;
@@ -13,10 +10,25 @@
     font-size: 16px;
     line-height: 18px;
     color: @special_dark-grey;
-    margin-bottom: 9px;
+    margin-bottom: 2px;
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &__link {
-    margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover path {
+      fill: @basic_green;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

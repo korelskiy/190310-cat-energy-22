@@ -26,6 +26,14 @@
     color: @basic_black;
     text-decoration: none;
     text-transform: uppercase;
+
+    &:hover {
+      color: fade(@basic_black, 60%);
+    }
+
+    &:active {
+      color: fade(@basic_black, 30%);
+    }
   }
 
   @media (max-width: @mobile-width-only) {
@@ -41,6 +49,13 @@
       justify-content: space-between;
       align-items: center;
       animation: none;
+    }
+
+    &__link {
+      &--active {
+        padding-bottom: 6px;
+        border-bottom: 2px solid @basic_green;
+      }
     }
 
     &__toggle {
