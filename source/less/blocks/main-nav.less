@@ -40,6 +40,10 @@
     &--closed &__list {
       display: none;
     }
+
+    &--nojs &__list {
+      display: block;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -52,6 +56,11 @@
     }
 
     &__link {
+      font-family: @special_font;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+
       &--active {
         padding-bottom: 6px;
         border-bottom: 2px solid @basic_green;

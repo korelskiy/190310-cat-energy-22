@@ -61,11 +61,23 @@
     background-position: center;
   }
 
+  @media (max-width: @mobile-width-only) {
+    &__burger--nojs {
+      display: none;
+    }
+  }
+
   @media (min-width: @tablet-width) {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 174px 1fr;
+    column-gap: 95px;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    padding: 34px 30px 0 30px;
+
+    &__top {
+      padding: 0;
+    }
 
     &__burger {
       display: none;

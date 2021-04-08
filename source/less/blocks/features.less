@@ -87,47 +87,101 @@
     padding: 28px 0 22px 0;
   }
 
-  &__item--slim::before {
-    content: "";
+  &__img {
     position: absolute;
-    background-image: url("../img/icon/cat_slim.svg");
-    background-repeat: no-repeat;
+    top: 23px;
+    left: 22px;
     width: 50px;
-    height: 53px;
-    margin-left: 22px;
-    margin-top: 21px;
-  }
-
-  &__item--pro::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icon/cat_pro.svg");
-    background-repeat: no-repeat;
-    width: 67px;
     height: 50px;
-    margin-left: 14px;
-    margin-top: 24px;
+    border-radius: 50%;
+    background-color: @basic_green;
   }
 
+  &__icon--slim {
+    position: absolute;
+    transform: translate(-50%, -6%);
+    width: 36px;
+    height: 50px;
+  }
+
+  &__icon--pro {
+    position: absolute;
+    transform: translate(-51%, 42%);
+    width: 67px;
+    height: 28px;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
 
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
     &__item {
+      display: grid;
+      grid-template-columns: 1fr min-content;
       min-height: 372px;
       padding-left: 52px;
+      margin-bottom: 30px;
+    }
+
+    &__item:last-child {
+      margin-bottom: 45px;
     }
 
     &__title {
+      padding: 0;
+      margin: 77px 0 24px 0;
+      font-size: 36px;
       text-align: left;
     }
 
     &__description {
       text-align: left;
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+      line-height: 24px;
     }
 
     &__link {
-      margin-bottom: 53px;
+      padding: 0;
+      margin: 57px 0 67px 0;
+      border: none;
+      font-size: 20px;
+      margin-top: 57px;
+
+      &::after {
+        margin-left: 25px;
+      }
+    }
+
+    &__img {
+      position: relative;
+      align-self: center;
+      margin: 0 60px 39px 13px;
+      left: 0;
+      right: 27px;
+      width: 200px;
+      height: 200px;
+      order: 2;
+    }
+
+    &__img--pro {
+      margin-left: 52px;
+    }
+
+    &__icon--slim {
+      width: 140px;
+      height: 192px;
+    }
+
+    &__icon--pro {
+      width: 268px;
+      height: 112px;
     }
   }
 
