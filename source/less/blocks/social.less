@@ -17,6 +17,22 @@
     color: @special_grey;
     text-decoration: none;
 
+    &--vkontakte svg {
+      width: 23px;
+      height: 16px;
+    }
+
+    &--instagram svg {
+
+      width: 16px;
+      height: 16px;
+    }
+
+    &--facebook svg {
+      width: 10px;
+      height: 17px;
+    }
+
     &--facebook {
       &:hover path {
         stroke: @basic_green;
@@ -51,6 +67,24 @@
   @media (min-width: @tablet-width) {
     &__list {
       border: none;
+      padding: 0;
+    }
+
+    &__link {
+      &--vkontakte svg {
+        width: 30px;
+        height: 22px;
+      }
+
+      &--instagram svg {
+        width: 23px;
+        height: 23px;
+      }
+
+      &--facebook svg {
+        width: 13px;
+        height: 27px;
+      }
     }
   }
 }

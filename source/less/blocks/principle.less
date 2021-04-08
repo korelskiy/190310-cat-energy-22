@@ -77,16 +77,80 @@
   }
 
   &__description {
+    font-size: 16px;
+    line-height: 24px;
     margin: 2px 0 0 80px;
   }
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
+    margin: 0;
+    padding-bottom: 7px;
+    border-bottom: 1px solid @basic_grey;
 
     &__list {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 60px;
+      grid-row-gap: 35px;
+      justify-content: flex-start;
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+      padding-bottom: 72px;
+    }
+
+    &__item {
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 280px;
+
+      &--useful {
+        background-image: url("../img/1.png");
+        background-repeat: no-repeat;
+        background-position: 122px 0;
+      }
+
+      &--convenient {
+        background-image: url("../img/2.png");
+        background-repeat: no-repeat;
+        background-position: 122px 0;
+      }
+
+      &--easy {
+        background-image: url("../img/3.png");
+        background-repeat: no-repeat;
+        background-position: 122px 0;
+      }
+
+      &--fast {
+        background-image: url("../img/4.png");
+        background-repeat: no-repeat;
+        background-position: 122px 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      &--useful::before,
+      &--convenient::before,
+      &--easy::before,
+      &--fast::before {
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &__description {
+      margin: 0 60px 0 0;
+      padding-top: 31px;
     }
   }
 
