@@ -1,10 +1,7 @@
 .copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  margin-top: 22px;
-  margin-bottom: 22px;
+  padding: 23px 0 13px 0;
+  border-top: 1px solid @special_grey-3;
+  margin: 0 20px;
 
   &__text {
     margin: 0;
@@ -13,5 +10,35 @@
     font-size: 16px;
     line-height: 18px;
     color: @special_dark-grey;
+    margin-bottom: 2px;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover path {
+      fill: @basic_green;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 10px 0;
+    padding: 0;
+    border: none;
+
+    &__text {
+      margin: 0 24px 3px 0;
+    }
   }
 }
