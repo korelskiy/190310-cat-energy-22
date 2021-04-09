@@ -85,9 +85,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    flex-direction: row;
-    justify-content: space-between;
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 264px;
     align-items: center;
-    padding: 0 110px;
+    padding: 64px 110px 0 110px;
+    margin: 0;
+
+    &__top {
+      justify-content: start;
+    }
   }
 }

@@ -80,8 +80,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    &__list {
-      width: 478px;
+    &__link {
+      font-size: 20px;
+      color: @basic_white;
+
+      &--active {
+        border-bottom: 2px solid @basic_white;
+      }
     }
   }
 }

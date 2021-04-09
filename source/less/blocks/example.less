@@ -15,6 +15,7 @@
     text-align: left;
     padding-top: 27px;
     padding-bottom: 33px;
+    padding-left: 20px;
   }
 
   &__description {
@@ -95,6 +96,7 @@
       margin-bottom: 65px;
       font-size: 60px;
       line-height: 60px;
+      padding-left: 30px;
     }
 
     &__description {
@@ -152,10 +154,10 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
 
     &__wrapper {
       padding: 0 110px;
+      background-color: @basic_grey;
     }
 
     &__stats-value {
@@ -169,6 +171,17 @@
     &__stats {
       justify-content: left;
       padding-bottom: 55px;
+    }
+
+    &__title {
+      margin-top: 27px;
+      padding-left: 110px;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    &__description {
+      margin-top: 82px;
     }
   }
 }
