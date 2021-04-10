@@ -63,6 +63,14 @@
       &--active {
         padding-bottom: 6px;
         border-bottom: 2px solid @basic_green;
+
+        &:hover {
+          border-bottom: 2px solid fade(@basic_green, 60%);
+        }
+
+        &:active {
+          border-bottom: 2px solid fade(@basic_green, 30%);
+        }
       }
     }
 
@@ -84,8 +92,24 @@
       font-size: 20px;
       color: @basic_white;
 
+      &:hover {
+        color: fade(@basic_white, 60%);
+      }
+
+      &:active {
+        color: fade(@basic_white, 30%);
+      }
+
       &--active {
         border-bottom: 2px solid @basic_white;
+
+        &:hover {
+          border-bottom: 2px solid fade(@basic_white, 60%);
+        }
+
+        &:active {
+          border-bottom: 2px solid fade(@basic_white, 30%);
+        }
       }
     }
   }

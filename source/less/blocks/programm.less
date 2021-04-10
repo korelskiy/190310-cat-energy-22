@@ -1,20 +1,65 @@
 .programm {
-  padding: 22px 0 0 0;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid @special_grey-3;
+  border-bottom: 1px solid @special_grey-3;
 
   &__list {
-    margin: 0;
-    padding: 0;
+    margin: 30px 0 0 0;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     list-style: none;
   }
 
   &__item {
-    padding-bottom: 12px;
+    padding-bottom: 24px;
   }
 
   &__item:last-child {
-    padding-bottom: 22px;
+    padding-bottom: 24px;
+  }
+
+  &__input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &__checkbox {
+    position: absolute;
+    margin-left: -45px;
+    width: 13px;
+    height: 13px;
+    background-color: @basic_white;
+    border-radius: 50%;
+    border: 8px solid @basic_white;
+    box-shadow: 0 0 0 1px @special_grey-5;
+  }
+
+  &__input:checked + &__checkbox {
+    background-color: @basic_green;
+  }
+
+  &__input:disabled + &__checkbox {
+    opacity: 0.3;
+  }
+
+  &__input:disabled + &__checkbox + &__text {
+    opacity: 0.3;
+  }
+
+  &__input:disabled:hover + &__checkbox {
+    box-shadow: 0 0 0 1px @special_grey-5;
+  }
+
+  &__input:hover + &__checkbox {
+    box-shadow: 0 0 0 1px @special_grey-9;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    padding-left: 45px;
   }
 
   &__text {

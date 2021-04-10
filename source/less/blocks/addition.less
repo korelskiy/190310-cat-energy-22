@@ -1,25 +1,38 @@
 .addition {
+  position: relative;
+
   &__title {
-    padding-top: 22px;
-    padding-bottom: 34px;
+    padding-left: 20px;
+    padding-top: 19px;
+    padding-bottom: 41px;
     font-family: @special_font;
     font-weight: 400;
     font-size: 24px;
     line-height: 26px;
     color: @basic_black;
     text-align: left;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: @basic_green;
+      width: 100%;
+      height: 2px;
+      top: 34px;
+      margin-left: 21px;
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     list-style: none;
-    margin: 0 0 34px 0;
-    padding: 0;
+    margin: 0 0 40px 0;
+    padding: 0 20px;
   }
 
   &__item {
-    padding-bottom: 12px;
+    padding-bottom: 24px;
   }
 
   &__item:last-child {
@@ -35,6 +48,52 @@
     color: @basic_black;
     text-transform: uppercase;
     text-align: left;
+  }
+
+  &__input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &__checkbox {
+    position: absolute;
+    margin-left: -28px;
+    width: 26px;
+    height: 26px;
+    background-color: @basic_white;
+    border: 1px solid @special_grey-5;
+  }
+
+  &__input:checked + &__checkbox {
+    background-image: url("../img/icon/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__input:disabled + &__checkbox {
+    opacity: 0.3;
+  }
+
+  &__input:disabled + &__checkbox + &__text {
+    opacity: 0.3;
+  }
+
+  &__input:checked:disabled + &__checkbox {
+    opacity: 0.3;
+  }
+
+  &__input:disabled:hover + &__checkbox {
+    border: 1px solid @special_grey-5;
+  }
+
+  &__input:hover + &__checkbox {
+    border: 1px solid @special_grey-9;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
   }
 
   @media (min-width: @tablet-width) {

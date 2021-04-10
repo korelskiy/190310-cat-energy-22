@@ -1,7 +1,9 @@
 .owner-contacts {
   padding-bottom: 23px;
+  position: relative;
 
   &__title {
+    padding-left: 20px;
     padding-top: 26px;
     padding-bottom: 35px;
     font-family: @special_font;
@@ -10,23 +12,95 @@
     line-height: 26px;
     color: @basic_black;
     text-align: left;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: @basic_green;
+      width: 100%;
+      height: 2px;
+      top: 42px;
+      margin-left: 45px;
+    }
   }
 
   &__list {
     margin: 0;
-    padding: 0;
+    padding: 0 20px;
     list-style: none;
   }
 
   &__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-bottom: 14px;
   }
 
   &__item:last-child {
     padding-bottom: 0;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+    position: absolute;
+
+    &--email {
+      width: 20px;
+      height: 14px;
+      left: 88%;
+    }
+
+    &--tel {
+      width: 20px;
+      height: 20px;
+      left: 89%;
+    }
+  }
+
+  &__field {
+    flex: 1;
+    height: 41px;
+    border: 1px solid @special_grey-4;
+    font-family: @special_font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: @special_dark-grey;
+    text-transform: uppercase;
+    padding-left: 15px;
+
+    &:hover {
+      border: 1px solid @special_grey-5;
+    }
+
+    &:focus {
+      border: 1px solid @special_dark-grey;
+      outline: none;
+    }
+
+    &:invalid {
+      border: 1px solid @special_red_error;
+    }
+  }
+
+  &__field:focus + &__icon--email path {
+    stroke: @basic_green;
+  }
+
+  &__field:focus + &__icon--tel path {
+    stroke: @basic_green;
+  }
+
+  &__field:invalid + &__icon--email path {
+    stroke: @special_red_error;
+  }
+
+  &__field:invalid + &__icon--tel path {
+    stroke: @special_red_error;
   }
 
   &__text {
@@ -37,20 +111,7 @@
     color: @special_dark-grey;
     text-transform: uppercase;
     text-align: left;
-    margin-right: 10px;
-  }
-
-  &__field {
-    flex: 1;
-    height: 45px;
-    border: 1px solid @special_grey-5;
-    font-family: @special_font;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    color: @special_dark-grey;
-    text-transform: uppercase;
-    padding-left: 15px;
+    margin-right: 8px;
   }
 
   @media (min-width: @tablet-width) {
