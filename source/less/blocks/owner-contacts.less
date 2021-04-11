@@ -115,20 +115,96 @@
   }
 
   @media (min-width: @tablet-width) {
+    &__title {
+      padding-left: 70px;
+      padding-top: 9px;
+      padding-bottom: 75px;
+      font-size: 36px;
+      line-height: 36px;
+
+      & br {
+        display: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: @basic_green;
+        width: 4%;
+        height: 2px;
+        top: 31px;
+        left: 0;
+      }
+
+      &::after {
+        height: 2px;
+        top: 31px;
+        margin-left: 41px;
+      }
+    }
+
     &__field {
-      margin-right: 36px;
+      height: 50px;
+      font-size: 20px;
+      line-height: 30px;
+      padding-left: 27px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 30px;
+      margin-right: 10px;
     }
 
     &__item {
-      padding-bottom: 20px;
+      padding-bottom: 17px;
     }
 
     &__item:last-child {
-      padding-bottom: 65px;
+      padding-bottom: 42px;
+    }
+
+    &__list {
+      padding-left: 70px;
+      padding-right: 66px;
+    }
+
+    &__icon {
+      &--email {
+        width: 20px;
+        height: 18px;
+        left: 94%;
+      }
+
+      &--tel {
+        width: 21px;
+        height: 21px;
+        left: 94%;
+      }
     }
   }
 
   @media (min-width: @desktop-width) {
+    padding-bottom: 20px;
+
+    &__title {
+      padding-left: 0;
+      padding-top: 4px;
+
+      &::before {
+        width: 6%;
+        height: 2px;
+        top: 27px;
+        left: -110px;
+      }
+
+      &::after {
+        height: 2px;
+        top: 27px;
+        margin-left: 41px;
+      }
+    }
+
     &__field {
       margin-right: 0;
     }
@@ -138,7 +214,7 @@
       grid-template-columns: 1fr 1fr;
       column-gap: 80px;
       grid-row-gap: 20px;
-      padding-bottom: 49px;
+      padding: 0 0 47px 0;
     }
 
     &__item {

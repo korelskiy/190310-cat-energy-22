@@ -72,21 +72,40 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-left: 70px;
+    margin-right: 66px;
+    margin-bottom: 66px;
+    border: 1px solid @special_grey-3;
+
+    &__text {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__checkbox {
+      margin-left: -60px;
+      width: 18px;
+      height: 18px;
+      border: 10px solid @basic_white;
+    }
+
     &__field {
       margin-right: 36px;
     }
 
     &__item {
-      padding-bottom: 13px;
-      margin-left: 28px;
+      padding-bottom: 22px;
+      margin-left: 24px;
     }
 
     &__item:last-child {
-      padding-bottom: 25px;
+      padding-bottom: 29px;
     }
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: 0;
+
     &__field {
       margin-right: 0;
     }

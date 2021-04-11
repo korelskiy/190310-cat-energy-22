@@ -22,6 +22,7 @@
   }
 
   &__owner-contacts {
+    margin: 0;
     padding: 0;
     border: none;
   }
@@ -29,17 +30,22 @@
   &__addition {
     padding: 0;
     border: none;
+    margin: 0;
   }
 
   &__button {
     display: block;
     box-sizing: border-box;
     margin: 0 auto;
-    width: 280px;
+    width: 100%;
     height: 40px;
     font-size: 16px;
     line-height: 40px;
     border: none;
+  }
+
+  &__footet {
+    padding: 0 20px;
   }
 
   &__footnote {
@@ -51,9 +57,11 @@
   }
 
   @media (min-width: @tablet-width) {
-    &__programm {
-      border: 1px solid @special_grey-3;
-      margin-right: 36px;
+    &__info {
+      padding-left: 70px;
+      padding-bottom: 66px;
+      font-size: 20px;
+      line-height: 30px;
     }
 
     &__footet {
@@ -61,19 +69,30 @@
       grid-template-columns: 1fr 1fr;
       column-gap: 60px;
       align-items: center;
+      padding-left: 70px;
+      padding-right: 66px;
+      margin-bottom: 70px;
     }
 
     &__button {
-      width: 100%;
+      font-size: 20px;
+      line-height: 20px;
+      width: 282px;
+      height: 52px;
     }
 
     &__footnote {
       text-align: left;
       margin: 0;
+      font-size: 16px;
     }
   }
 
   @media (min-width: @desktop-width) {
+    &__info {
+      padding-left: 0;
+    }
+
     &__box {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -86,6 +105,12 @@
 
     &__footet {
       column-gap: 80px;
+      padding: 0;
+      margin-bottom: 80px;
+    }
+
+    &__button {
+      width: 100%;
     }
   }
 }

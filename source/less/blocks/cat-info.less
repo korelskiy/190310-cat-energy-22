@@ -57,8 +57,13 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding: 0 67px 0 70px;
+
     &__field {
-      margin-right: 36px;
+      padding: 0 0 0 18px;
+      height: 50px;
+      font-size: 20px;
+      line-height: 30px;
     }
 
     &__item {
@@ -68,9 +73,17 @@
     &__item:last-child {
       padding-bottom: 72px;
     }
+
+    &__text {
+      padding-right: 17px;
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   @media (min-width: @desktop-width) {
+    padding-left: 0;
+
     &__field {
       margin-right: 0;
     }

@@ -37,7 +37,9 @@
   @media (min-width: @tablet-width) {
     &__box {
       padding: 0 30px;
-      min-height: 201px;
+      min-height: auto;
+      margin: 60px 0 53px 0;
+      background-color: @basic_grey;
     }
 
     &__title {
@@ -59,9 +61,20 @@
   }
 
   @media (min-width: @desktop-width) {
+    background-color: @basic_white;
+
     &__box {
+      position: absolute;
+      box-sizing: border-box;
+      padding: 0 50px 0 35px;
       width: 570px;
-      padding: 0 110px;
+      height: 200px;
+      margin: 100px 0 0 110px;
+      background-color: @basic_white;
+    }
+
+    &__address {
+      text-align: left;
     }
   }
 }
