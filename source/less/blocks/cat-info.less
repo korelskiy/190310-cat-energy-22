@@ -1,5 +1,5 @@
 .cat-info {
-  padding: 0;
+  padding: 0 20px;
 
   &__list {
     margin: 0;
@@ -19,7 +19,7 @@
   }
 
   &__text {
-    padding-right: 15px;
+    padding-right: 17px;
     font-family: @special_font;
     font-weight: 400;
     font-size: 16px;
@@ -31,8 +31,9 @@
 
   &__field {
     flex: 1;
-    padding-left: 15px;
-    height: 45px;
+    margin: 0;
+    padding: 0 0 0 15px;
+    height: 43px;
     border: 1px solid @special_grey-4;
     font-family: @special_font;
     font-weight: 400;
@@ -40,11 +41,29 @@
     line-height: 18px;
     color: @special_dark-grey;
     text-transform: uppercase;
+
+    &:hover {
+      border: 1px solid @special_grey-5;
+    }
+
+    &:focus {
+      border: 1px solid @special_dark-grey;
+      outline: none;
+    }
+
+    &:invalid {
+      border: 1px solid @special_red_error;
+    }
   }
 
   @media (min-width: @tablet-width) {
+    padding: 0 67px 0 70px;
+
     &__field {
-      margin-right: 36px;
+      padding: 0 0 0 18px;
+      height: 50px;
+      font-size: 20px;
+      line-height: 30px;
     }
 
     &__item {
@@ -54,9 +73,17 @@
     &__item:last-child {
       padding-bottom: 72px;
     }
+
+    &__text {
+      padding-right: 17px;
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   @media (min-width: @desktop-width) {
+    padding-left: 0;
+
     &__field {
       margin-right: 0;
     }
