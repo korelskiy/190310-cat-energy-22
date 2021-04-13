@@ -2,6 +2,7 @@
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
   }
 
   &__inner {
@@ -10,7 +11,7 @@
   }
 
   &__image-link {
-    align-self: center;
+    align-self: flex-end;
     justify-self: center;
   }
 
@@ -20,7 +21,7 @@
 
   &__title-text {
     margin: 0;
-    padding-bottom: 18px;
+    padding: 0 40px 14px 0;
     font-family: @special_font;
     font-weight: 400;
     font-size: 16px;
@@ -30,21 +31,33 @@
     text-transform: uppercase;
   }
 
+  &__description {
+    border-collapse: collapse;
+    padding: 0;
+    margin: 0;
+  }
+
   &__field {
+    padding: 0;
     font-size: 12px;
     line-height: 16px;
+    text-align: left;
+    vertical-align: middle;
   }
 
   &__value {
+    padding: 0;
     font-size: 12px;
     line-height: 16px;
+    text-align: right;
+    vertical-align: middle;
   }
 
   &__button {
     display: block;
     box-sizing: border-box;
-    margin: 13px auto 15px auto;
-    width: 280px;
+    margin: 22px 20px 24px 20px;
+    width: auto;
     height: 40px;
     font-size: 16px;
     line-height: 40px;
