@@ -39,12 +39,37 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    margin: 20px 38px;
+    margin: 26px 36px 20px 36px;
 
     &__button {
       grid-column-start: 1;
       grid-column-end: 3;
       width: auto;
+      margin: 24px 0 8px 0;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 20px;
+      padding: 0;
+    }
+
+    &__value {
+      text-align: right;
+      vertical-align: middle;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__volume {
+      text-align: right;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &__description {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
     }
   }
 

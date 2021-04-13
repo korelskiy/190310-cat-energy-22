@@ -45,4 +45,34 @@
     font-size: 16px;
     line-height: 40px;
   }
+
+  @media (min-width: @tablet-width) {
+    &__title {
+      margin: 166px 0 0 0;
+      padding: 0 55px;
+      font-size: 20px;
+      line-height: 22px;
+
+      &::before {
+        width: 60px;
+        height: 60px;
+        background-image: url("/img/icon/plus_tab.svg");
+        margin: 0 calc(50% - 30px);
+        top: 54px;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 18px;
+      padding: 0 55px;
+      margin-bottom: 70px;
+    }
+
+    &__button {
+      display: block;
+      width: auto;
+      margin: 0 20px 33px 20px;
+    }
+  }
 }
