@@ -1,8 +1,4 @@
 .catalog {
-  &__wrapper {
-    padding: 0 20px;
-  }
-
   &__title {
     font-family: @special_font;
     font-weight: 400;
@@ -10,6 +6,7 @@
     line-height: 36px;
     color: @basic_black;
     text-align: left;
+    margin: 28px 0 40px 20px;
   }
 
   &__list {
@@ -19,8 +16,7 @@
   }
 
   &__item {
-    padding-top: 13px;
-    padding-bottom: 15px;
+    padding: 20px 0 0 0;
     border-top: 1px solid @special_grey-6;
   }
 
@@ -31,6 +27,21 @@
   @media (min-width: @tablet-width) {
     &__wrapper {
       padding: 0 30px;
+    }
+
+    &__product {
+      background-color: @basic_grey;
+    }
+
+    &__product--more {
+      background-color: @basic_white;
+      border: 2px solid @basic_grey;
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+      margin: 66px 0 162px 0;
     }
 
     &__list {
@@ -54,6 +65,10 @@
   @media (min-width: @desktop-width) {
     &__wrapper {
       padding: 0 110px;
+    }
+
+    &__title {
+      margin: 82px 0 165px 0;
     }
 
     &__list {
