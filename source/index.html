@@ -14,7 +14,11 @@
     <header class="page-header page-header--index">
       <div class="page-header__top">
         <a class="page-header__link" href="#">
-          <img class="page-header__logo" src="img/logo-header__image.svg" width="33" height="37" alt="Логотип Cat Energy">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-header__image-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-header__image-tablet.svg">
+            <img class="page-header__logo" src="img/logo-header__image-mobile.svg" width="33" height="37" alt="Логотип Cat Energy">
+          </picture>
         </a>
         <a class="page-header__link" href="#">
           <img class="page-header__logo-text" src="img/logo-header__text.svg" width="101" height="18" alt="Текстовый логотип Cat Energy">
@@ -45,8 +49,11 @@
           <p class="welcome__text">Занялся собой? Займись котом!</p>
         </div>
         <div class="welcome__box">
-          <img class="welcome__image" src="img/index-product-mobile.png" width="280" height="270" alt="Банка с питанием Cat Energy">
-
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/index/index-can-desktop.png 1x, img/index/index-can-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index/index-can-tablet.jpg 1x, img/index/index-can-tablet@2x.jpg 2x">
+            <img class="welcome__image" src="img/index/index-can-mobile.png" srcset="img/index/index-can-mobile@2x.png 2x" width="280" height="270" alt="Банка с питанием Cat Energy">
+          </picture>
         </div>
         <a class="welcome__buttom button" href="form.html">Подобрать программу</a>
       </section>
@@ -129,10 +136,18 @@
           <div class="effect-slider__wrapper">
             <ul class="effect-slider__list">
               <li class="effect-slider__item effect-slider__item--before">
-                <img class="effect-slider__img" src="img/effect--before.png" width="311" height="232" alt="Изображение кота «До»">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/index/cat-after-desktop.png 1x, img/index/cat-after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/index/cat-after-tablet.png 1x, img/index/cat-after-tablet@2x.png 2x">
+                  <img class="effect-slider__img" src="img/index/cat-after-mobile.png 1x" srcset="img/index/cat-after-mobile@2x.png 2x" width="251" height="240" alt="Изображение кота «До»">
+                </picture>
               </li>
               <li class="effect-slider__item effect-slider__item--after">
-                <img class="effect-slider__img" src="img/effect--after.png" width="251" height="240" alt="Изображение кота «После»">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/index/cat-before-desktop.png 1x, img/index/cat-before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/index/cat-before-tablet.png 1x, img/index/cat-before-tablet@2x.png 2x">
+                  <img class="effect-slider__img" src="img/index/cat-before-mobile.png 1x" srcset="img/index/cat-before-mobile@2x.png 2x" width="311" height="232" alt="Изображение кота «После»">
+                </picture>
               </li>
             </ul>
             <div class="effect-slider__control">
@@ -156,7 +171,11 @@
             <p class="contacts__title">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
             <p class="contacts__address">ул. Большая<br> Конюшенная, д. 19/8<br> Санкт-Петербург</p>
           </div>
-          <img class="contacts__map" src="img/contacts__map.jpg" width="320" height="362" alt="Наше местоположение на карте">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
+              <img class="contacts__map" src="img/map/map-mobile.jpg 1x" srcset="img/map/map-mobile@2x.jpg 2x" width="320" height="362" alt="Наше местоположение на карте">
+            </picture>
         </div>
       </div>
       <div class="page-footer__inner-box">
