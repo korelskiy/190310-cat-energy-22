@@ -19,10 +19,11 @@
       content: "";
       position: absolute;
       background-color: @basic_green;
-      width: 100%;
+      width: calc(100% - 163px);
       height: 2px;
       top: 16px;
       margin-left: 23px;
+      right: 0;
     }
   }
 
@@ -82,6 +83,7 @@
         height: 2px;
         top: 22px;
         margin-left: 41px;
+        width: calc(100% - 289px);
       }
     }
 
@@ -103,6 +105,10 @@
       &::before {
         width: 6%;
         left: -110px;
+      }
+
+      &::after {
+        width: calc(100% - 332px);
       }
     }
 
