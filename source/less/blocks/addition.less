@@ -16,10 +16,11 @@
       content: "";
       position: absolute;
       background-color: @basic_green;
-      width: 100%;
+      width: calc(100% - 184px);
       height: 2px;
       top: 34px;
       margin-left: 21px;
+      right: 0;
     }
   }
 
@@ -118,6 +119,7 @@
         height: 2px;
         top: 31px;
         margin-left: 41px;
+        width: calc(100% - 322px);
       }
     }
 
@@ -161,6 +163,11 @@
         height: 2px;
         top: 31px;
         left: -110px;
+      }
+
+      &::after {
+        width: calc(100% - 143px);
+        right: -110px;
       }
     }
 
