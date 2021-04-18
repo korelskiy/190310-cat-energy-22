@@ -55,8 +55,10 @@
   }
 
   @media (min-width: @tablet-width) {
+    position: relative;
     display: flex;
     flex-direction: column;
+    padding-bottom: 0;
 
     &__wrapper {
       height: auto;
@@ -72,7 +74,7 @@
       font-size: 60px;
       line-height: 60px;
       padding: 0;
-      padding-top: 65px;
+      padding-top: 60px;
       padding-left: 87px;
     }
 
@@ -81,28 +83,25 @@
       text-align: left;
       font-size: 20px;
       line-height: 20px;
-      padding-top: 41px;
+      padding-top: 43px;
       padding-left: 87px;
     }
 
     &__image {
       width: 709px;
       height: 609px;
-      margin: 0 auto;
+      margin: 20px auto 0 auto;
       order: 2;
     }
 
     &__buttom {
       padding: 0;
-      margin: 49px 0 0 112px;
+      margin: 0 0 0 112px;
       width: 244px;
       font-size: 20px;
       line-height: 54px;
-      order: 2;
-    }
-
-    &__box {
-      order: 3;
+      position: absolute;
+      top: 292px;
     }
   }
 
@@ -112,6 +111,7 @@
     justify-content: space-between;
     padding: 0;
     margin-bottom: 80px;
+    position: static;
 
     &__wrapper {
       padding-left: 110px;
@@ -121,8 +121,6 @@
     &__box {
       order: 2;
       background-color: @basic_green;
-      grid-row-start: 1;
-      grid-row-end: 3;
       grid-column-start: 2;
       grid-column-end: 3;
       background-image: url("../img/index/bg-index-cat-desktop.jpg");
@@ -147,14 +145,15 @@
 
     &__buttom {
       order: 3;
-      margin: 51px 0 185px 190px;
+      margin: 163px 0 0 190px;
       height: 54px;
     }
 
     &__image {
       width: 552px;
       height: 499px;
-      margin: 200px 200px;
+      margin: 140px 0 0 -163px;
+      padding-bottom: 55px;
     }
   }
 }
