@@ -50,14 +50,16 @@
     position: absolute;
 
     &--email {
+      stroke: @special_dark-grey-2;
       width: 20px;
-      height: 14px;
+      height: 15px;
       left: 88%;
     }
 
     &--tel {
+      fill: @special_dark-grey-2;
       width: 20px;
-      height: 20px;
+      height: 21px;
       left: 89%;
     }
   }
@@ -88,20 +90,20 @@
     }
   }
 
-  &__field:focus + &__icon--email path {
+  &__field:focus + &__icon--email {
     stroke: @basic_green;
   }
 
-  &__field:focus + &__icon--tel path {
-    stroke: @basic_green;
+  &__field:focus + &__icon--tel {
+    fill: @basic_green;
   }
 
-  &__field:invalid + &__icon--email path {
+  &__field:invalid + &__icon--email {
     stroke: @special_red_error;
   }
 
-  &__field:invalid + &__icon--tel path {
-    stroke: @special_red_error;
+  &__field:invalid + &__icon--tel {
+    fill: @special_red_error;
   }
 
   &__text {
@@ -149,13 +151,13 @@
       height: 50px;
       font-size: 20px;
       line-height: 30px;
-      padding-left: 27px;
+      padding-left: 20px;
     }
 
     &__text {
       font-size: 20px;
       line-height: 30px;
-      margin-right: 10px;
+      margin-right: 17px;
     }
 
     &__item {
@@ -174,13 +176,11 @@
     &__icon {
       &--email {
         width: 20px;
-        height: 18px;
+        height: 14px;
         left: 94%;
       }
 
       &--tel {
-        width: 21px;
-        height: 21px;
         left: 94%;
       }
     }
@@ -204,7 +204,7 @@
         height: 2px;
         top: 27px;
         margin-left: 41px;
-        width: calc(100% - 662px);
+        width: calc(100% - 552px);
       }
     }
 
