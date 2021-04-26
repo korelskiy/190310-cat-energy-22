@@ -6,8 +6,8 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico"><!-- 32×32 -->
-    <link rel="icon" href="img/icon/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/icon/favicon_apple.png"><!-- 180×180 -->
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon_apple.png"><!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
@@ -15,18 +15,18 @@
       <div class="page-header__top">
         <a class="page-header__link" href="#" aria-label="Логотип Cat Energy">
           <svg class="page-header__logo page-header__logo--mobile" width="34" height="38">
-              <use xlink:href="img/sprite.svg#logo-mobile"></use>
+              <use xlink:href="img/icons/sprite.svg#logo-mobile"></use>
           </svg>
           <svg class="page-header__logo page-header__logo--tablet" width="61" height="51">
-              <use xlink:href="img/sprite.svg#logo-tablet"></use>
+              <use xlink:href="img/icons/sprite.svg#logo-tablet"></use>
           </svg>
           <svg class="page-header__logo page-header__logo--desktop" width="71" height="59">
-              <use xlink:href="img/sprite.svg#logo-desktop"></use>
+              <use xlink:href="img/icons/sprite.svg#logo-desktop"></use>
           </svg>
         </a>
         <a class="page-header__link" href="#" aria-label="Текстовый логотип Cat Energy">
           <svg class="page-header__logo page-header__logo--text" width="101" height="18">
-              <use xlink:href="img/sprite.svg#logo-text"></use>
+              <use xlink:href="img/icons/sprite.svg#logo-text"></use>
           </svg>
         </a>
         <button class="page-header__burger page-header__burger--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -73,7 +73,7 @@
             <li class="features__item features__item--slim">
               <div class="features__image">
                 <svg class="features__icon features__icon--slim">
-                  <use xlink:href="img/sprite.svg#icon-cat-slim"></use>
+                  <use xlink:href="img/icons/sprite.svg#icon-cat-slim"></use>
                 </svg>
               </div>
               <div class="features__inner">
@@ -87,7 +87,7 @@
             <li class="features__item features__item--pro">
               <div class="features__image">
                 <svg class="features__icon features__icon--pro">
-                  <use xlink:href="img/sprite.svg#icon-cat-pro"></use>
+                  <use xlink:href="img/icons/sprite.svg#icon-cat-pro"></use>
                 </svg>
               </div>
               <div class="features__inner">
@@ -150,6 +150,9 @@
             <ul class="effect-slider__list">
               <li class="effect-slider__item effect-slider__item--before">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/index/cat-after-desktop.webp 1x, img/index/cat-after-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/index/cat-after-tablet.webp 1x, img/index/cat-after-tablet.webp 2x">
+                  <source type="image/webp" srcset="img/index/cat-after-mobile.webp 1x, img/index/cat-after-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/index/cat-after-desktop.png 1x, img/index/cat-after-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/index/cat-after-tablet.png 1x, img/index/cat-after-tablet@2x.png 2x">
                   <img class="effect-slider__img" src="img/index/cat-after-mobile.png" srcset="img/index/cat-after-mobile@2x.png 2x" width="251" height="240" alt="Изображение кота «До»">
@@ -157,6 +160,9 @@
               </li>
               <li class="effect-slider__item effect-slider__item--after">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/index/cat-before-desktop.webp 1x, img/index/cat-before-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/index/cat-before-tablet.webp 1x, img/index/cat-before-tablet.webp 2x">
+                  <source type="image/webp" srcset="img/index/cat-before-mobile.webp 1x, img/index/cat-before-mobile@2x.webp 2x">
                   <source media="(min-width: 1440px)" srcset="img/index/cat-before-desktop.png 1x, img/index/cat-before-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/index/cat-before-tablet.png 1x, img/index/cat-before-tablet@2x.png 2x">
                   <img class="effect-slider__img" src="img/index/cat-before-mobile.png" srcset="img/index/cat-before-mobile@2x.png 2x" width="311" height="232" alt="Изображение кота «После»">
@@ -185,6 +191,9 @@
             <p class="contacts__address">ул. Большая<br> Конюшенная, д. 19/8<br> Санкт-Петербург</p>
           </div>
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
               <img class="contacts__map" src="img/map/map-mobile.jpg" srcset="img/map/map-mobile@2x.jpg 2x" width="320" height="362" alt="Наше местоположение на карте">
@@ -195,7 +204,7 @@
         <div class="page-footer__logo logo-footer">
           <a class="logo-footer__link" href="#" aria-label="Логотип Cat Energy">
             <svg class="page-footer__logo page-footer__logo--text" width="128" height="24">
-              <use xlink:href="img/sprite.svg#logo-text-footer"></use>
+              <use xlink:href="img/icons/sprite.svg#logo-text-footer"></use>
             </svg>
           </a>
         </div>
@@ -204,21 +213,21 @@
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтактe">
                 <svg class="social__logo social__logo--vkontakte" width="23" height="16">
-                  <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
+                  <use xlink:href="img/icons/sprite.svg#icon_vkontakte"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--instagram" href="https://www.instagram.com/" aria-label="Мы в Инстаграме">
                 <svg class="social__logo social__logo--instagram" width="16" height="16">
-                  <use xlink:href="img/sprite.svg#icon_instagram"></use>
+                  <use xlink:href="img/icons/sprite.svg#icon_instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="https://www.facebook.com/" aria-label="Мы в Фейсбуке">
                 <svg class="social__logo social__logo--facebook" width="22" height="22">
-                  <use xlink:href="img/sprite.svg#icon_facebook"></use>
+                  <use xlink:href="img/icons/sprite.svg#icon_facebook"></use>
                 </svg>
               </a>
             </li>
@@ -228,7 +237,7 @@
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн‑курс HTML и CSS. Адаптивная вёрстка и автоматизация">
             <span class="copyright__text">HTML Academy</span>
             <svg class="copyright__logo" width="27" height="34">
-              <use xlink:href="img/sprite.svg#logo-html"></use>
+              <use xlink:href="img/icons/sprite.svg#logo-html"></use>
             </svg>
           </a>
         </div>
