@@ -6,6 +6,20 @@
     padding: 12px 20px 12px 20px;
   }
 
+  &__link {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
   &__logo {
     &--tablet {
       display: none;
@@ -16,15 +30,7 @@
     }
 
     &--text {
-      margin: 5px 10px 0 0;
-    }
-
-    &:hover {
-      opacity: 0.8;
-    }
-
-    &:active {
-      opacity: 0.6;
+      margin: 5px 0 0 calc(50% - 73px);
     }
   }
 
@@ -92,7 +98,7 @@
       }
 
       &--text {
-        margin: 5px 10px 0 10px;
+        margin: 0 10px 0 10px;
       }
     }
   }

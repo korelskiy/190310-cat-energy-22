@@ -34,6 +34,7 @@
     border-radius: 50%;
     border: 8px solid @basic_white;
     box-shadow: 0 0 0 1px @special_grey-5;
+    cursor: pointer;
   }
 
   &__input:checked + &__checkbox {
@@ -54,6 +55,10 @@
 
   &__input:hover + &__checkbox {
     box-shadow: 0 0 0 1px @special_grey-9;
+  }
+
+  &__input:focus + &__checkbox {
+    box-shadow: 0 0 0 1px @special_dark-grey;
   }
 
   &__label {
@@ -105,6 +110,7 @@
 
   @media (min-width: @desktop-width) {
     margin-left: 0;
+    margin-right: 0;
 
     &__field {
       margin-right: 0;

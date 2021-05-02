@@ -2,6 +2,7 @@
   position: relative;
 
   &__title {
+    margin: 0;
     padding-left: 20px;
     padding-top: 19px;
     padding-bottom: 41px;
@@ -63,6 +64,7 @@
     height: 26px;
     background-color: @basic_white;
     border: 1px solid @special_grey-5;
+    cursor: pointer;
   }
 
   &__input:checked + &__checkbox {
@@ -89,6 +91,10 @@
 
   &__input:hover + &__checkbox {
     border: 1px solid @special_grey-9;
+  }
+
+  &__input:focus + &__checkbox {
+    border: 1px solid @special_dark-grey;
   }
 
   &__label {

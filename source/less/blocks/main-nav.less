@@ -52,6 +52,7 @@
       justify-content: space-between;
       align-items: center;
       animation: none;
+      margin-top: 15px;
     }
 
     &__link {
@@ -80,6 +81,7 @@
 
     &__item {
       border: none;
+      margin-bottom: 15px;
     }
 
     &__item:last-child {
@@ -88,6 +90,14 @@
   }
 
   @media (min-width: @desktop-width) {
+    &__list {
+      margin-top: 20px;
+    }
+
+    &__item {
+      margin-bottom: 20px;
+    }
+
     &__link {
       font-size: 20px;
     }

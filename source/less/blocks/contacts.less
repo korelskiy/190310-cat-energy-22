@@ -32,18 +32,38 @@
     color: @special_dark-grey;
   }
 
-  &__map {
+  &__maps {
+    position: relative;
+  }
+
+  &__map-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  &__map--img {
     display: block;
     width: 100%;
     object-fit: cover;
   }
 
+  &__map--google {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
   @media (min-width: @tablet-width) {
+    background-color: @basic_white;
+
     &__box {
       padding: 0 30px;
       min-height: auto;
       margin: 60px 0 53px 0;
-      background-color: @basic_grey;
+      background-color: @basic_white;
     }
 
     &__title {
@@ -59,7 +79,11 @@
       text-align: right;
     }
 
-    &__map {
+    &__map--img {
+      height: 400px;
+    }
+
+    &__map--google {
       height: 400px;
     }
   }
@@ -75,6 +99,7 @@
       height: 200px;
       margin: 100px 0 0 110px;
       background-color: @basic_white;
+      z-index: 2;
     }
 
     &__address {
