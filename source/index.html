@@ -152,7 +152,7 @@
         <div class="example__effect effect-slider">
           <div class="effect-slider__wrapper">
             <ul class="effect-slider__list">
-              <li class="effect-slider__item effect-slider__item--before">
+              <li class="effect-slider__item effect-slider__item--before effect-slider__item--off">
                 <picture>
                   <source type="image/webp" media="(min-width: 1440px)" srcset="img/index/cat-after-desktop.webp 1x, img/index/cat-after-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/index/cat-after-tablet.webp 1x, img/index/cat-after-tablet.webp 2x">
@@ -174,13 +174,13 @@
               </li>
             </ul>
             <div class="effect-slider__control">
-              <button class="effect-slider__label" type="button">Было</button>
+              <button class="effect-slider__label effect-slider__label--before" type="button">Было</button>
               <div class="effect-slider__range">
                 <button class="effect-slider__toggle" type="button">
                   <span class="visually-hidden">Ползунок</span>
                 </button>
               </div>
-              <button class="effect-slider__label" type="button">Стало</button>
+              <button class="effect-slider__label effect-slider__label--after" type="button">Стало</button>
             </div>
           </div>
         </div>
@@ -253,5 +253,6 @@
       </div>
     </footer>
     <script src="js/nav.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
