@@ -1,16 +1,23 @@
 .social {
-  width: 130px;
   margin: 0 auto;
 
   &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 21px 0 15px 0;
     margin: 0;
     list-style: none;
     text-align: center;
+  }
+
+  &__item {
+    margin-right: 35px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__link {
@@ -60,7 +67,11 @@
   @media (min-width: @tablet-width) {
     &__list {
       border: none;
-      padding: 0;
+      padding: 13px 0 15px 30px;
+    }
+
+    &__item {
+      margin-right: 25px;
     }
 
     &__logo {
