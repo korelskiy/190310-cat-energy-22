@@ -18,8 +18,18 @@
     background-color: @special_grey-2;
     text-transform: uppercase;
     border: none;
-    margin: 0 12px;
+    margin: 0 17px;
+    padding: 0;
     cursor: pointer;
+    border-bottom: 1px solid @special_grey-2;
+
+    &:hover {
+      border-bottom: 1px solid fade(@basic_black, 40%);
+    }
+
+    &:active {
+      border-bottom: 1px solid @special_grey-2;
+    }
   }
 
   &__control {
@@ -28,6 +38,7 @@
     align-items: center;
     padding-top: 32px;
     padding-bottom: 34px;
+    height: auto;
   }
 
   &__range {
@@ -84,8 +95,12 @@
       font-size: 20px;
       line-height: 30px;
       padding: 0;
-      border-bottom: 1px dotted @special_grey-3;
       margin: 0 23px;
+      border-bottom: 1px dotted @special_grey-3;
+
+      &:active {
+        border-bottom: 1px solid @basic_grey;
+      }
     }
 
     &__range {
@@ -102,8 +117,17 @@
       padding: 4px;
       margin: -16px auto 0 auto;
       border: 12px solid @basic_white;
+      box-shadow: 0 0 0 1px @special_grey-5;
       filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
       cursor: pointer;
+
+      &:hover {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+      }
+
+      &:active {
+        box-shadow: 0 0 0 1px @basic_green;
+      }
     }
   }
 
