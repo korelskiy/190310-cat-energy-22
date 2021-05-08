@@ -16,15 +16,11 @@
     <header class="page-header page-header--index">
       <div class="page-header__top">
         <a class="page-header__link" href="#" aria-label="Логотип Cat Energy">
-          <svg class="page-header__logo page-header__logo--mobile" width="34" height="38">
-              <use xlink:href="img/icons/sprite.svg#logo-mobile"></use>
-          </svg>
-          <svg class="page-header__logo page-header__logo--tablet" width="61" height="51">
-              <use xlink:href="img/icons/sprite.svg#logo-tablet"></use>
-          </svg>
-          <svg class="page-header__logo page-header__logo--desktop" width="71" height="59">
-              <use xlink:href="img/icons/sprite.svg#logo-desktop"></use>
-          </svg>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__logo page-header__logo--img" src="img/logo-mobile.svg" width="34" height="38" alt="Логотип Cat Energy">
+          </picture>
           <svg class="page-header__logo page-header__logo--text" width="101" height="19">
               <use xlink:href="img/icons/sprite.svg#logo-text"></use>
           </svg>
