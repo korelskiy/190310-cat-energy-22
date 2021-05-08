@@ -1,126 +1,128 @@
 .comment {
   position: relative;
+}
 
-  &__wraper {
-    padding: 0 20px;
+.comment__wraper {
+  padding: 0 20px;
+}
+
+.comment__title {
+  margin: 0;
+  padding-left: 20px;
+  font-family: @special_font;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: @basic_black;
+  text-align: left;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @basic_green;
+    width: calc(100% - 163px);
+    height: 2px;
+    top: 16px;
+    margin-left: 23px;
+    right: 0;
+  }
+}
+
+.comment__text {
+  padding-top: 9px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  margin: 37px auto 0 auto;
+  width: 100%;
+  min-height: 150px;
+  font-family: @special_font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  resize: none;
+  overflow: auto;
+  color: @special_dark-grey;
+  text-transform: uppercase;
+  border: 1px solid @special_grey-4;
+
+  &::placeholder {
+    color: @special_dark-grey;
   }
 
-  &__title {
-    margin: 0;
-    padding-left: 20px;
-    font-family: @special_font;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 26px;
-    color: @basic_black;
-    text-align: left;
+  &:hover {
+    border: 1px solid @special_grey-5;
+  }
 
-    &::after {
+  &:focus {
+    border: 2px solid @special_dark-grey;
+    outline: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .comment__wraper {
+    padding: 0;
+    margin-left: 70px;
+    margin-right: 66px;
+    margin-bottom: 52px;
+  }
+
+  .comment__title {
+    padding-left: 70px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
       content: "";
       position: absolute;
       background-color: @basic_green;
-      width: calc(100% - 163px);
+      width: 4%;
       height: 2px;
-      top: 16px;
-      margin-left: 23px;
-      right: 0;
+      top: 22px;
+      left: 0;
+    }
+
+    &::after {
+      height: 2px;
+      top: 22px;
+      margin-left: 41px;
+      width: calc(100% - 289px);
     }
   }
 
-  &__text {
-    padding-top: 9px;
-    padding-left: 15px;
-    box-sizing: border-box;
-    margin: 37px auto 0 auto;
-    width: 100%;
-    min-height: 150px;
-    font-family: @special_font;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    resize: none;
-    overflow: auto;
-    color: @special_dark-grey;
-    text-transform: uppercase;
-    border: 1px solid @special_grey-4;
-
-    &::placeholder {
-      color: @special_dark-grey;
-    }
-
-    &:hover {
-      border: 1px solid @special_grey-5;
-    }
-
-    &:focus {
-      border: 2px solid @special_dark-grey;
-      outline: none;
-    }
+  .comment__text {
+    min-height: 174px;
+    margin-top: 74px;
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 17px;
   }
+}
 
-  @media (min-width: @tablet-width) {
-    &__wraper {
-      padding: 0;
-      margin-left: 70px;
-      margin-right: 66px;
-      margin-bottom: 52px;
-    }
-
-    &__title {
-      padding-left: 70px;
-      padding-top: 0;
-      padding-bottom: 0;
-      font-size: 36px;
-      line-height: 36px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        background-color: @basic_green;
-        width: 4%;
-        height: 2px;
-        top: 22px;
-        left: 0;
-      }
-
-      &::after {
-        height: 2px;
-        top: 22px;
-        margin-left: 41px;
-        width: calc(100% - 289px);
-      }
-    }
-
-    &__text {
-      min-height: 174px;
-      margin-top: 74px;
-      font-size: 20px;
-      line-height: 30px;
-      padding-left: 17px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {
+  .comment {
     margin-right: 0;
+  }
 
-    &__title {
-      padding-left: 0;
+  .comment__title {
+    padding-left: 0;
 
-      &::before {
-        width: 6%;
-        left: -110px;
-      }
-
-      &::after {
-        width: calc(100% - 112px);
-        margin-right: -110px;
-      }
+    &::before {
+      width: 6%;
+      left: -110px;
     }
 
-    &__wraper {
-      margin-left: 0;
-      margin-right: 0;
-      margin-bottom: 55px;
+    &::after {
+      width: calc(100% - 112px);
+      margin-right: -110px;
     }
+  }
+
+  .comment__wraper {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 55px;
   }
 }

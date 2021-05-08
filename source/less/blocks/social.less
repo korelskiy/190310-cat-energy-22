@@ -1,94 +1,94 @@
 .social {
   margin: 0 auto;
+}
 
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 21px 0 15px 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 21px 0 15px 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.social__item {
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  color: @special_grey;
+  text-decoration: none;
+}
+
+.social__logo {
+  &--vkontakte {
+    fill: @special_grey;
   }
 
-  &__item {
-    margin-right: 35px;
-
-    &:last-child {
-      margin-right: 0;
-    }
+  &--instagram {
+    fill: @special_grey;
   }
 
-  &__link {
-    color: @special_grey;
-    text-decoration: none;
+  &--facebook {
+    stroke: @special_grey;
+    fill: none;
   }
 
-  &__logo {
+  &--vkontakte:hover {
+    fill: @basic_green;
+  }
+
+  &--instagram:hover {
+    fill: @basic_green;
+  }
+
+  &--facebook:hover {
+    stroke: @basic_green;
+  }
+
+  &--vkontakte:active {
+    opacity: 0.3;
+  }
+
+  &--instagram:active {
+    opacity: 0.3;
+  }
+
+  &--facebook:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    border: none;
+    padding: 13px 0 15px 30px;
+  }
+
+  .social__item {
+    margin-right: 25px;
+  }
+
+  .social__logo {
     &--vkontakte {
-      fill: @special_grey;
+      width: 30px;
+      height: 22px;
     }
 
     &--instagram {
-      fill: @special_grey;
+      width: 23px;
+      height: 23px;
     }
 
     &--facebook {
-      stroke: @special_grey;
-      fill: none;
-    }
-
-    &--vkontakte:hover {
-      fill: @basic_green;
-    }
-
-    &--instagram:hover {
-      fill: @basic_green;
-    }
-
-    &--facebook:hover {
-      stroke: @basic_green;
-    }
-
-    &--vkontakte:active {
-      opacity: 0.3;
-    }
-
-    &--instagram:active {
-      opacity: 0.3;
-    }
-
-    &--facebook:active {
-      opacity: 0.3;
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    &__list {
-      border: none;
-      padding: 13px 0 15px 30px;
-    }
-
-    &__item {
-      margin-right: 25px;
-    }
-
-    &__logo {
-      &--vkontakte {
-        width: 30px;
-        height: 22px;
-      }
-
-      &--instagram {
-        width: 23px;
-        height: 23px;
-      }
-
-      &--facebook {
-        width: 28px;
-        height: 33px;
-      }
+      width: 28px;
+      height: 33px;
     }
   }
 }

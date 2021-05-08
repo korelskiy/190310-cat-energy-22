@@ -1,168 +1,172 @@
 .welcome {
   padding-bottom: 22px;
+}
 
-  &__inner {
-    min-height: 302px;
-    box-sizing: border-box;
-    background-color: @basic_green;
-    background-image: url("../img/index/bg-index-cat-mobile.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    z-index: 1;
+.welcome__inner {
+  min-height: 302px;
+  box-sizing: border-box;
+  background-color: @basic_green;
+  background-image: url("../img/index/bg-index-cat-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: 1;
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/index/bg-index-cat-mobile@2x.jpg");
-    }
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index/bg-index-cat-mobile@2x.jpg");
   }
+}
 
-  &__box {
-    margin: -310px 0 0 0;
-  }
+.welcome__box {
+  margin: -310px 0 0 0;
+}
 
-  &__title {
-    margin: 0;
-    font-family: @special_font;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 36px;
-    color: @basic_white;
-    text-align: center;
-    padding-top: 28px;
-    padding-bottom: 25px;
-  }
+.welcome__title {
+  margin: 0;
+  font-family: @special_font;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: @basic_white;
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 25px;
+}
 
-  &__text {
-    margin: 0;
-    font-family: @special_font;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    color: @basic_white;
-    text-transform: uppercase;
-    text-align: center;
-  }
+.welcome__text {
+  margin: 0;
+  font-family: @special_font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: @basic_white;
+  text-transform: uppercase;
+  text-align: center;
+}
 
-  &__image {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 42px;
-  }
+.welcome__image {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 42px;
+}
 
-  &__buttom {
-    display: block;
-    box-sizing: border-box;
-    padding: 0 20px;
-    margin: 138px 20px 0 20px;
-    width: auto;
-    line-height: 40px;
-    font-size: 14px;
-  }
+.welcome__buttom {
+  display: block;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin: 138px 20px 0 20px;
+  width: auto;
+  line-height: 40px;
+  font-size: 14px;
+}
 
-  @media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
+  .welcome {
     position: relative;
     display: flex;
     flex-direction: column;
     padding-bottom: 0;
-
-    &__wrapper {
-      z-index: 1;
-    }
-
-    &__inner {
-      height: auto;
-      background-color: transparent;
-      background-image: none;
-      padding-left: 30px;
-      padding-right: 30px;
-    }
-
-    &__title {
-      color: @basic_black;
-      text-align: left;
-      font-size: 60px;
-      line-height: 60px;
-      padding: 0;
-      padding-top: 60px;
-      padding-left: 87px;
-    }
-
-    &__text {
-      color: @basic_black;
-      text-align: left;
-      font-size: 20px;
-      line-height: 20px;
-      padding-top: 40px;
-      padding-left: 87px;
-    }
-
-    &__image {
-      width: 709px;
-      height: 609px;
-      margin: 20px auto 0 auto;
-    }
-
-    &__buttom {
-      padding: 0;
-      margin: -14px 0 0 111px;
-      width: 244px;
-      font-size: 20px;
-      line-height: 54px;
-    }
-
-    &__box {
-      margin: -105px 0 0 0;
-    }
   }
 
-  @media (min-width: @desktop-width) {
+  .welcome__wrapper {
+    z-index: 1;
+  }
+
+  .welcome__inner {
+    height: auto;
+    background-color: transparent;
+    background-image: none;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .welcome__title {
+    color: @basic_black;
+    text-align: left;
+    font-size: 60px;
+    line-height: 60px;
+    padding: 0;
+    padding-top: 60px;
+    padding-left: 87px;
+  }
+
+  .welcome__text {
+    color: @basic_black;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 40px;
+    padding-left: 87px;
+  }
+
+  .welcome__image {
+    width: 709px;
+    height: 609px;
+    margin: 20px auto 0 auto;
+  }
+
+  .welcome__buttom {
+    padding: 0;
+    margin: -14px 0 0 111px;
+    width: 244px;
+    font-size: 20px;
+    line-height: 54px;
+  }
+
+  .welcome__box {
+    margin: -105px 0 0 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .welcome {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     padding: 0;
     margin-bottom: 80px;
     position: static;
+  }
 
-    &__inner {
-      padding-left: 110px;
-      padding-right: 110px;
+  .welcome__inner {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .welcome__box {
+    background-color: @basic_green;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-image: url("../img/index/bg-index-cat-desktop.jpg");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: -107px 0 0 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/bg-index-cat-desktop@2x.jpg");
     }
+  }
 
-    &__box {
-      background-color: @basic_green;
-      grid-column-start: 2;
-      grid-column-end: 3;
-      background-image: url("../img/index/bg-index-cat-desktop.jpg");
-      background-position: right bottom;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      margin: -107px 0 0 0;
+  .welcome__title {
+    padding-top: 224px;
+    padding-left: 80px;
+  }
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/index/bg-index-cat-desktop@2x.jpg");
-      }
-    }
+  .welcome__text {
+    padding-top: 40px;
+    padding-left: 80px;
+  }
 
-    &__title {
-      padding-top: 224px;
-      padding-left: 80px;
-    }
+  .welcome__buttom {
+    margin: 50px 0 0 190px;
+    height: 54px;
+  }
 
-    &__text {
-      padding-top: 40px;
-      padding-left: 80px;
-    }
-
-    &__buttom {
-      margin: 50px 0 0 190px;
-      height: 54px;
-    }
-
-    &__image {
-      width: 552px;
-      height: 499px;
-      margin: 248px 0 0 -163px;
-      padding-bottom: 55px;
-    }
+  .welcome__image {
+    width: 552px;
+    height: 499px;
+    margin: 248px 0 0 -163px;
+    padding-bottom: 55px;
   }
 }

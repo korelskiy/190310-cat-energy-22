@@ -1,186 +1,186 @@
 .addition {
   position: relative;
+}
 
-  &__title {
-    margin: 0;
-    padding-left: 20px;
-    padding-top: 19px;
-    padding-bottom: 41px;
-    font-family: @special_font;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 26px;
-    color: @basic_black;
-    text-align: left;
+.addition__title {
+  margin: 0;
+  padding-left: 20px;
+  padding-top: 19px;
+  padding-bottom: 41px;
+  font-family: @special_font;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: @basic_black;
+  text-align: left;
 
-    &::after {
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @basic_green;
+    width: calc(100% - 184px);
+    height: 2px;
+    top: 34px;
+    margin-left: 21px;
+    right: 0;
+  }
+}
+
+.addition__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0 0 40px 0;
+  padding: 0 20px;
+}
+
+.addition__item {
+  padding-bottom: 24px;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.addition__text {
+  padding-left: 16px;
+  font-family: @special_font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @basic_black;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.addition__input {
+  position: absolute;
+  appearance: none;
+}
+
+.addition__checkbox {
+  position: absolute;
+  margin-left: -28px;
+  width: 26px;
+  height: 26px;
+  background-color: @basic_white;
+  border: 1px solid @special_grey-5;
+  cursor: pointer;
+}
+
+.addition__input:checked + .addition__checkbox {
+  background-image: url("../img/form/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.addition__input:disabled + .addition__checkbox {
+  opacity: 0.3;
+}
+
+.addition__input:disabled + .addition__checkbox + .addition__text {
+  opacity: 0.3;
+}
+
+.addition__input:checked:disabled + .addition__checkbox {
+  opacity: 0.3;
+}
+
+.addition__input:disabled:hover + .addition__checkbox {
+  border: 1px solid @special_grey-5;
+}
+
+.addition__input:hover + .addition__checkbox {
+  border: 1px solid @special_grey-9;
+}
+
+.addition__input:focus + .addition__checkbox {
+  border: 1px solid @special_dark-grey;
+}
+
+.addition__label {
+  display: flex;
+  align-items: center;
+  padding-left: 28px;
+}
+
+@media (min-width: @tablet-width) {
+  .addition__title {
+    padding-left: 70px;
+    padding-top: 9px;
+    padding-bottom: 62px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
       content: "";
       position: absolute;
       background-color: @basic_green;
-      width: calc(100% - 184px);
+      width: 4%;
       height: 2px;
-      top: 34px;
-      margin-left: 21px;
-      right: 0;
+      top: 31px;
+      left: 0;
+    }
+
+    &::after {
+      height: 2px;
+      top: 31px;
+      margin-left: 41px;
+      width: calc(100% - 322px);
     }
   }
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    margin: 0 0 40px 0;
-    padding: 0 20px;
+  .addition__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    grid-row-gap: 43px;
+    padding: 0;
+    margin: 0 66px 58px 70px;
   }
 
-  &__item {
-    padding-bottom: 24px;
+  .addition__item {
+    padding: 0;
   }
 
-  &__item:last-child {
-    padding-bottom: 0;
+  .addition__label {
+    padding-left: 24px;
   }
 
-  &__text {
-    padding-left: 16px;
-    font-family: @special_font;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    color: @basic_black;
-    text-transform: uppercase;
-    text-align: left;
+  .addition__text {
+    padding-left: 33px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  &__input {
-    position: absolute;
-    appearance: none;
-  }
-
-  &__checkbox {
-    position: absolute;
+  .addition__checkbox {
     margin-left: -28px;
-    width: 26px;
-    height: 26px;
-    background-color: @basic_white;
-    border: 1px solid @special_grey-5;
-    cursor: pointer;
+    width: 40px;
+    height: 40px;
   }
+}
 
-  &__input:checked + &__checkbox {
-    background-image: url("../img/form/check.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+@media (min-width: @desktop-width) {
+  .addition__title {
+    padding-left: 0;
+    padding-top: 7px;
 
-  &__input:disabled + &__checkbox {
-    opacity: 0.3;
-  }
-
-  &__input:disabled + &__checkbox + &__text {
-    opacity: 0.3;
-  }
-
-  &__input:checked:disabled + &__checkbox {
-    opacity: 0.3;
-  }
-
-  &__input:disabled:hover + &__checkbox {
-    border: 1px solid @special_grey-5;
-  }
-
-  &__input:hover + &__checkbox {
-    border: 1px solid @special_grey-9;
-  }
-
-  &__input:focus + &__checkbox {
-    border: 1px solid @special_dark-grey;
-  }
-
-  &__label {
-    display: flex;
-    align-items: center;
-    padding-left: 28px;
-  }
-
-  @media (min-width: @tablet-width) {
-    &__title {
-      padding-left: 70px;
-      padding-top: 9px;
-      padding-bottom: 62px;
-      font-size: 36px;
-      line-height: 36px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        background-color: @basic_green;
-        width: 4%;
-        height: 2px;
-        top: 31px;
-        left: 0;
-      }
-
-      &::after {
-        height: 2px;
-        top: 31px;
-        margin-left: 41px;
-        width: calc(100% - 322px);
-      }
+    &::before {
+      width: 6%;
+      height: 2px;
+      top: 31px;
+      left: -110px;
     }
 
-    &__list {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 60px;
-      grid-row-gap: 43px;
-      padding: 0;
-      margin: 0 66px 58px 70px;
-    }
-
-    &__item {
-      padding: 0;
-    }
-
-    &__label {
-      padding-left: 24px;
-    }
-
-    &__text {
-      padding-left: 33px;
-      font-size: 20px;
-      line-height: 30px;
-    }
-
-    &__checkbox {
-      margin-left: -28px;
-      width: 40px;
-      height: 40px;
+    &::after {
+      width: calc(100% - 143px);
+      right: -110px;
     }
   }
 
-  @media (min-width: @desktop-width) {
-    &__title {
-      padding-left: 0;
-      padding-top: 7px;
-
-      &::before {
-        width: 6%;
-        height: 2px;
-        top: 31px;
-        left: -110px;
-      }
-
-      &::after {
-        width: calc(100% - 143px);
-        right: -110px;
-      }
-    }
-
-    &__list {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      column-gap: 80px;
-      margin: 0 0 66px 0;
-    }
+  .addition__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    margin: 0 0 66px 0;
   }
 }
