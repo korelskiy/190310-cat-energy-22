@@ -65,16 +65,21 @@
 
 @media (min-width: @tablet-width) {
   .product {
-    min-height: 430px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-content: space-between;
+    height: 100%;
   }
 
   .product__wrapper {
     display: flex;
     flex-direction: column;
     padding: 0 36px;
+  }
+
+  .product__description {
+    margin-bottom: 30px;
   }
 
   .product__img {
@@ -120,7 +125,7 @@
   }
 
   .product__button {
-    margin: 0 37px 38px 39px;
+    margin: 0 37px 43px 39px;
   }
 }
 
