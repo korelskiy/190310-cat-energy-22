@@ -48,6 +48,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .main-nav__wrapper {
+    max-width: 515px;
+    margin-left: auto;
+  }
+
   .main-nav__list {
     flex-direction: row;
     justify-content: space-between;
@@ -63,7 +68,7 @@
     line-height: 24px;
 
     &--active {
-      padding-bottom: 6px;
+      padding-bottom: 4px;
       border-bottom: 2px solid @basic_green;
 
       &:hover {
@@ -91,6 +96,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .main-nav__wrapper {
+    width: 480px;
+    margin-left: auto;
+  }
+
   .main-nav__list {
     margin-top: 20px;
   }

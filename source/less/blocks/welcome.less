@@ -69,6 +69,8 @@
   }
 
   .welcome__wrapper {
+    width: 708px;
+    margin: 0 auto;
     z-index: 1;
   }
 
@@ -85,9 +87,7 @@
     text-align: left;
     font-size: 60px;
     line-height: 60px;
-    padding: 0;
-    padding-top: 60px;
-    padding-left: 87px;
+    padding: 56px 0 0 58px;
   }
 
   .welcome__text {
@@ -95,8 +95,8 @@
     text-align: left;
     font-size: 20px;
     line-height: 20px;
-    padding-top: 40px;
-    padding-left: 87px;
+    padding-top: 42px;
+    padding-left: 58px;
   }
 
   .welcome__image {
@@ -108,7 +108,7 @@
   .welcome__buttom {
     display: inline-block;
     padding: 0 28px;
-    margin: -14px 0 0 111px;
+    margin: -15px 0 0 80px;
     font-size: 20px;
     line-height: 54px;
   }
@@ -119,6 +119,13 @@
 }
 
 @media (min-width: @desktop-width) {
+  .welcome__wrapper {
+    width: 570px;
+    margin: 0 0 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .welcome {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -129,8 +136,9 @@
   }
 
   .welcome__inner {
-    padding-left: 110px;
-    padding-right: 110px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .welcome__box {
@@ -150,16 +158,17 @@
 
   .welcome__title {
     padding-top: 224px;
-    padding-left: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .welcome__text {
     padding-top: 40px;
-    padding-left: 80px;
+    padding-left: 40px;
   }
 
   .welcome__buttom {
-    margin: 50px 0 0 190px;
+    margin: 50px 0 0 40px;
     height: 54px;
   }
 

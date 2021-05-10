@@ -91,11 +91,16 @@
     border-bottom: 1px solid @basic_grey;
   }
 
+  .principle__wrapper {
+    width: 708px;
+    margin: 0 auto;
+  }
+
   .principle__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    grid-row-gap: 35px;
+    grid-row-gap: 38px;
     justify-content: flex-start;
   }
 
@@ -155,12 +160,28 @@
     font-size: 16px;
     line-height: 24px;
     margin: 0 60px 0 0;
-    padding-top: 31px;
+    padding-top: 35px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .principle__wrapper {
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  .principle__description {
+    margin: 0;
+    padding-top: 31px;
+  }
+
+  .principle__item {
+    width: 245px;
+  }
+
   .principle {
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 0 110px;
     border-bottom: none;
   }

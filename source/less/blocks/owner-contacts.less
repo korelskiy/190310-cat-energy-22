@@ -141,8 +141,8 @@
 
     &::before {
       content: "";
-      background-color: @basic_green;
       width: 30px;
+      background-color: @basic_green;
       height: 2px;
       margin-right: 40px;
       margin-top: 20px;
@@ -150,6 +150,7 @@
 
     &::after {
       height: 2px;
+      width: 10px;
       margin-left: 42px;
       margin-top: 20px;
     }
@@ -166,11 +167,13 @@
   .owner-contacts__text {
     font-size: 20px;
     line-height: 30px;
-    margin-right: 17px;
+    margin-right: 20px;
   }
 
   .owner-contacts__item {
-    padding-bottom: 17px;
+    padding-bottom: 19px;
+    padding-left: 20px;
+    padding-right: 15px;
 
     &:last-child {
       padding-bottom: 42px;
@@ -178,8 +181,9 @@
   }
 
   .owner-contacts__list {
-    padding-left: 70px;
-    padding-right: 66px;
+    width: 667px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .owner-contacts__icon {
@@ -206,11 +210,9 @@
 
     &::before {
       width: 70px;
-      margin-left: -110px;
     }
 
     &::after {
-      margin-right: -110px;
       margin-left: 49px;
     }
   }
@@ -225,10 +227,13 @@
     column-gap: 80px;
     grid-row-gap: 20px;
     padding: 0 0 47px 0;
+    width: 1220px;
   }
 
   .owner-contacts__item {
     padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
 
     &:last-child {
       padding-bottom: 0;

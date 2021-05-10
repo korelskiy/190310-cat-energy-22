@@ -60,10 +60,21 @@
     background-color: @basic_white;
   }
 
+  .contacts__wrapper {
+    background-color: @basic_white;
+
+    &--color {
+      background-color: @basic_grey;
+    }
+  }
+
   .contacts__box {
-    padding: 60px 30px 53px 30px;
+    padding: 58px 30px 53px 30px;
     min-height: auto;
     background-color: @basic_white;
+    max-width: 768px;
+    box-sizing: border-box;
+    margin: 0 auto;
 
     &--color {
       background-color: @basic_grey;
@@ -81,6 +92,10 @@
     line-height: 30px;
     margin-right: 40px;
     text-align: right;
+  }
+
+  .contacts__maps {
+    height: 400px;
   }
 
   .contacts__maps-img {

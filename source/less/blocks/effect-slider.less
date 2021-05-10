@@ -78,7 +78,7 @@
 
   .effect-slider__control {
     padding-bottom: 70px;
-    padding-top: 17px;
+    padding-top: 12px;
   }
 
   .effect-slider__list {
@@ -135,17 +135,26 @@
 @media (min-width: @desktop-width) {
   .effect-slider {
     background-color: @basic_grey;
-    padding: 0 110px 0 0;
+    padding: 0;
+    width: 570px;
   }
 
   .effect-slider__label {
     background-color: @basic_grey;
-    margin: 0 20px;
     padding: 0;
+
+    &--before {
+      margin: 0 23px 0 0;
+    }
+
+    &--after {
+      margin: 0 0 0 23px;
+    }
   }
 
   .effect-slider__control {
     margin: 30px auto 0 auto;
+    padding-top: 17px;
   }
 
   .effect-slider__list {
@@ -154,9 +163,6 @@
   }
 
   .effect-slider__img {
-    margin: -240px auto 0 auto;
-    height: 515px;
-    width: 100%;
-    object-fit: contain;
+    margin: -240px 0 0 0;
   }
 }
