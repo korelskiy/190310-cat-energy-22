@@ -82,14 +82,28 @@
   }
 
   .effect-slider__list {
+    display: flex;
     margin: 0 auto;
     width: 670px;
+    position: relative;
+  }
+
+  .effect-slider__item {
+    &--before {
+      order: 2;
+      position: absolute;
+      right: 0;
+    }
+
+    &--off {
+      display: block;
+    }
   }
 
   .effect-slider__img {
     margin: -210px auto 0 auto;
     height: 515px;
-    width: 100%;
+    width: auto;
   }
 
   .effect-slider__label {
