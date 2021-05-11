@@ -8,6 +8,8 @@
 }
 
 .catalog-addition__title {
+  display: flex;
+  align-items: flex-start;
   margin: 0 0 0 20px;
   padding-top: 25px;
   padding-bottom: 36px;
@@ -20,13 +22,12 @@
 
   &::after {
     content: "";
-    position: absolute;
     background-color: @basic_green;
-    width: calc(100% - 267px);
     height: 2px;
-    top: 40px;
+    width: auto;
+    flex-grow: 1;
     margin-left: 23px;
-    right: 0;
+    margin-top: 15px;
   }
 }
 
@@ -84,16 +85,19 @@
 
 @media (min-width: @tablet-width) {
   .catalog-addition {
-    padding: 0 30px;
+    padding: 0;
   }
 
   .catalog-addition__wrapper {
     padding: 0;
+    width: 708px;
+    margin: 0 auto;
   }
 
   .catalog-addition__promo {
+    width: 708px;
+    margin: 67px auto 73px auto;
     box-sizing: border-box;
-    margin: 70px 0 73px 0;
     min-height: 200px;
     background-image: url("../img/catalog/tablet/bg-promo-tablet@2x.jpg");
 
@@ -123,23 +127,23 @@
 
   .catalog-addition__title {
     padding: 0;
-    margin: 67px 0 80px 38px;
+    margin: 67px 0 80px 0;
     font-size: 36px;
     line-height: 36px;
 
     &::before {
       content: "";
-      position: absolute;
-      width: 4%;
+      width: 30px;
       height: 2px;
-      top: 23px;
-      margin-left: -68px;
       background-color: @basic_green;
+      margin-top: 22px;
+      margin-right: 38px;
     }
 
     &::after {
-      top: 23px;
-      width: calc(100% - 441px);
+      height: 2px;
+      margin-top: 22px;
+      margin-left: 35px;
     }
   }
 
@@ -154,14 +158,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 80px;
-    margin-bottom: 86px;
-    padding: 0 110px;
+    padding: 0;
+    width: 1220px;
+    margin: 86px auto 90px auto;
   }
 
   .catalog-addition__wrapper {
     padding: 0;
     grid-column-start: 1;
     grid-column-end: 4;
+    margin: 0;
+    width: auto;
   }
 
   .catalog-addition__item {
@@ -171,6 +178,7 @@
   }
 
   .catalog-addition__promo {
+    width: 245px;
     margin: 0;
     grid-column-start: 4;
     grid-column-end: 5;
@@ -199,21 +207,16 @@
 
   .catalog-addition__title {
     padding: 0;
-    margin: 72px 0 80px 0;
+    margin: 77px 0 80px 0;
     grid-column-start: 1;
     grid-column-end: 5;
 
     &::before {
-      width: 5%;
-      top: 95px;
-      margin-left: -110px;
+      width: 70px;
     }
 
     &::after {
-      width: calc(100% - 483px);
-      top: 95px;
-      margin: 0 0 0 35px;
-      padding: 0;
+      margin-left: 42px;
     }
   }
 }

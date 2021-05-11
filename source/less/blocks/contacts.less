@@ -22,6 +22,10 @@
   text-transform: uppercase;
 }
 
+.contacts__content {
+  margin: 0 0 0 -5px;
+}
+
 .contacts__address {
   margin: 0;
   font-family: @basic_font;
@@ -29,6 +33,14 @@
   font-size: 14px;
   line-height: 20px;
   color: @special_dark-grey;
+}
+
+.contacts__city {
+  margin: 0;
+  font-family: @basic_font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .contacts__maps {
@@ -69,7 +81,7 @@
   }
 
   .contacts__box {
-    padding: 58px 30px 53px 30px;
+    padding: 60px 30px 58px 30px;
     min-height: auto;
     background-color: @basic_white;
     max-width: 768px;
@@ -87,11 +99,21 @@
     margin-left: 40px;
   }
 
+  .contacts__content {
+    margin-top: 5px;
+  }
+
   .contacts__address {
     font-size: 16px;
-    line-height: 30px;
     margin-right: 40px;
     text-align: right;
+    line-height: 20px;
+  }
+
+  .contacts__city {
+    font-size: 16px;
+    text-align: right;
+    margin: 20px 40px 0 0;
   }
 
   .contacts__maps {
@@ -112,13 +134,17 @@
     background-color: @basic_white;
   }
 
+  .contacts__title {
+    margin-top: 4px;
+  }
+
   .contacts__box {
     position: absolute;
     box-sizing: border-box;
     padding: 0 50px 0 35px;
     width: 570px;
     height: 200px;
-    margin: 100px 0 0 110px;
+    margin: 95px 0 0 110px;
     background-color: @basic_white;
     z-index: 2;
 
@@ -127,7 +153,19 @@
     }
   }
 
+  .contacts__content {
+    margin-top: 10px;
+  }
+
   .contacts__address {
     text-align: left;
+    line-height: 20px;
+  }
+
+  .contacts__city {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: left;
+    margin: 15px 0 0 0;
   }
 }

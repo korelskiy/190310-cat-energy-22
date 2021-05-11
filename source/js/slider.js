@@ -7,11 +7,9 @@ const range = document.querySelector(".effect-slider__range");
 btn_before.onclick = function() {
   img_before.classList.remove("effect-slider__item--off");
   img_after.classList.add("effect-slider__item--off");
-  range.classList.remove("effect-slider__range--after");
 }
 
 btn_after.onclick = function() {
   img_after.classList.remove("effect-slider__item--off");
   img_before.classList.add("effect-slider__item--off");
-  range.classList.add("effect-slider__range--after");
 }

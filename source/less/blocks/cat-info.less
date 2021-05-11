@@ -33,7 +33,7 @@
 .cat-info__field {
   flex: 1;
   margin: 0;
-  padding: 0 0 0 15px;
+  padding: 0 15px 0 15px;
   height: 43px;
   border: 1px solid @special_grey-4;
   font-family: @special_font;
@@ -54,12 +54,13 @@
   }
 
   &:focus {
-    border: 2px solid @special_dark-grey;
-    outline: none;
+    border: 1px solid @special_dark-grey;
+    outline: 1px solid @special_dark-grey;
   }
 
   &:invalid {
-    border: 2px solid @special_red_error;
+    border: 1px solid @special_red_error;
+    outline: 1px solid @special_red_error;
   }
 }
 
@@ -71,7 +72,7 @@
   }
 
   .cat-info__field {
-    padding: 0 0 0 18px;
+    padding: 0 18px 0 18px;
     height: 50px;
     font-size: 20px;
     line-height: 30px;
