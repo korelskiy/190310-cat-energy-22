@@ -1,11 +1,11 @@
-.effect-slider__list {
-  margin: 0;
-  padding: 42px 0 0 0;
-  list-style: none;
+.effect-slider {
+  margin-top: 42 px;
 }
 
-.effect-slider__item--off {
-  display: none;
+.effect-slider__image {
+  &--after {
+    display: none;
+  }
 }
 
 .effect-slider__label {
@@ -72,36 +72,50 @@
 
 @media (min-width: @tablet-width) {
   .effect-slider {
-    background-color: @special_grey-2;
-    padding: 0 30px;
+    padding: 0;
   }
 
   .effect-slider__control {
     padding-bottom: 70px;
     padding-top: 12px;
+    background-color: @special_grey-2;
   }
 
-  .effect-slider__list {
+  .effect-slider__images {
     display: flex;
     margin: 0 auto;
     width: 670px;
     position: relative;
+    align-items: center;
   }
 
-  .effect-slider__item {
-    &--before {
-      order: 2;
-      position: absolute;
-      right: 0;
+  .effect-slider__images-wrapper {
+    background: linear-gradient(to bottom, @basic_white 32%, @special_grey-2 32%);
+  }
+
+  .effect-slider__image {
+    margin: 0 auto;
+    height: 515px;
+    background: linear-gradient(to bottom, @basic_white 32%, @special_grey-2 32%);
+
+    &--after {
+      display: block;
+      position: relative;
+      margin: 0 40px 0 auto;
+      z-index: 1;
     }
 
-    &--off {
-      display: block;
+    &--before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 50%;
+      overflow: hidden;
     }
   }
 
   .effect-slider__img {
-    margin: -210px auto 0 auto;
     height: 515px;
     width: auto;
   }
@@ -148,9 +162,34 @@
 
 @media (min-width: @desktop-width) {
   .effect-slider {
-    background-color: @basic_grey;
-    padding: 0;
-    width: 570px;
+    background-color: none;
+    margin-top: -220px;
+  }
+
+  .effect-slider__images-wrapper {
+    background: transparent;
+  }
+
+  .effect-slider__image {
+    margin: 0 auto;
+    height: 536px;
+    background: none;
+
+    &--after {
+      display: block;
+      position: relative;
+      margin: 0 40px 0 auto;
+      z-index: 1;
+    }
+
+    &--before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 50%;
+      overflow: hidden;
+    }
   }
 
   .effect-slider__label {
@@ -169,14 +208,6 @@
   .effect-slider__control {
     margin: 30px auto 0 auto;
     padding-top: 17px;
-  }
-
-  .effect-slider__list {
-    width: 610px;
-    margin: 0 auto;
-  }
-
-  .effect-slider__img {
-    margin: -240px 0 0 0;
+    background-color: @basic_grey;
   }
 }
