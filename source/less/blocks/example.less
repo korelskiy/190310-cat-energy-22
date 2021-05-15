@@ -165,9 +165,32 @@
 
   .example__box {
     display: flex;
-    background-color: @basic_grey;
     margin: 0 auto;
     justify-content: center;
+    position: relative;
+    background-color: @basic_grey;
+
+    &::before {
+      content: "";
+      display: block;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: auto;
+      background-color: @basic_grey;
+      flex-grow: 1;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      top: 0;
+      left: auto;
+      bottom: 0;
+      width: auto;
+      background-color: @special_grey-2;
+      flex-grow: 1;
+    }
   }
 
   .example__title {

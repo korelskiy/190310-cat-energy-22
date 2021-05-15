@@ -3,7 +3,7 @@
 }
 
 .effect-slider__image {
-  &--after {
+  &--off {
     display: none;
   }
 }
@@ -168,7 +168,11 @@
   }
 
   .effect-slider__images-wrapper {
-    background: transparent;
+    background-color: transparent;
+  }
+
+  .effect-slider__images {
+    background: linear-gradient(to bottom, @basic_white 185px, @special_grey-2 185px);
   }
 
   .effect-slider__image {
@@ -188,7 +192,7 @@
       top: 0;
       bottom: 0;
       z-index: 2;
-      width: 55%;
+      width: 54%;
       overflow: hidden;
       background: linear-gradient(to bottom, @basic_white 185px, @basic_grey 185px);
     }
@@ -204,13 +208,14 @@
 
     &--after {
       margin: 0 0 0 23px;
+      background-color: @special_grey-2;
     }
   }
 
   .effect-slider__control {
     margin: 0 auto 0 auto;
     padding-top: 13px;
-    background-color: @basic_grey;
     justify-content: flex-end;
+    background: linear-gradient(to right, @basic_grey 360px, @special_grey-2 360px);
   }
 }
