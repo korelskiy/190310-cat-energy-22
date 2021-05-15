@@ -163,7 +163,8 @@
 @media (min-width: @desktop-width) {
   .effect-slider {
     background-color: none;
-    margin-top: -220px;
+    margin-top: -185px;
+    width: 650px;
   }
 
   .effect-slider__images-wrapper {
@@ -187,8 +188,9 @@
       top: 0;
       bottom: 0;
       z-index: 2;
-      width: 50%;
+      width: 55%;
       overflow: hidden;
+      background: linear-gradient(to bottom, @basic_white 185px, @basic_grey 185px);
     }
   }
 
@@ -206,8 +208,9 @@
   }
 
   .effect-slider__control {
-    margin: 30px auto 0 auto;
-    padding-top: 17px;
+    margin: 0 auto 0 auto;
+    padding-top: 13px;
     background-color: @basic_grey;
+    justify-content: flex-end;
   }
 }
