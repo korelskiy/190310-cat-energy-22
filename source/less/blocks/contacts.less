@@ -1,109 +1,171 @@
-.contacts {
-  &__box {
-    padding: 0 20px;
-    min-height: 114px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.contacts__box {
+  padding: 0 20px;
+  min-height: 114px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: @basic_white;
+
+  &--color {
+    background-color: @basic_grey;
+  }
+}
+
+.contacts__title {
+  margin: 0;
+  font-family: @special_font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @special_black;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.contacts__content {
+  margin: 0 0 0 -5px;
+}
+
+.contacts__address {
+  margin: 0;
+  font-family: @basic_font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: @special_dark-grey;
+}
+
+.contacts__city {
+  margin: 0;
+  font-family: @basic_font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts__maps {
+  position: relative;
+}
+
+.contacts__maps-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.contacts__maps-img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contacts__maps-google {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    background-color: @basic_white;
+  }
+
+  .contacts__wrapper {
     background-color: @basic_white;
 
-    &--catalog {
+    &--color {
       background-color: @basic_grey;
     }
   }
 
-  &__title {
-    margin: 0;
-    font-family: @special_font;
-    font-weight: 400;
+  .contacts__box {
+    padding: 60px 30px 58px 30px;
+    min-height: auto;
+    background-color: @basic_white;
+    max-width: 768px;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    &--color {
+      background-color: @basic_grey;
+    }
+  }
+
+  .contacts__title {
+    font-size: 20px;
+    line-height: 26px;
+    margin-left: 40px;
+  }
+
+  .contacts__content {
+    margin-top: 5px;
+  }
+
+  .contacts__address {
     font-size: 16px;
-    line-height: 18px;
-    color: @special_black;
-    text-align: left;
-    text-transform: uppercase;
-  }
-
-  &__address {
-    margin: 0;
-    font-family: @basic_font;
-    font-weight: 400;
-    font-size: 14px;
+    margin-right: 40px;
+    text-align: right;
     line-height: 20px;
-    color: @special_dark-grey;
   }
 
-  &__maps {
-    position: relative;
+  .contacts__city {
+    font-size: 16px;
+    text-align: right;
+    margin: 20px 40px 0 0;
   }
 
-  &__map-wrapper {
-    width: 100%;
+  .contacts__maps {
+    height: 400px;
+  }
+
+  .contacts__maps-img {
+    height: 400px;
+  }
+
+  .contacts__maps-google {
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    background-color: @basic_white;
+  }
+
+  .contacts__title {
+    margin-top: 4px;
+  }
+
+  .contacts__box {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
-
-  &__map--img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  &__map--google {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-  }
-
-  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    padding: 0 50px 0 35px;
+    width: 570px;
+    height: 200px;
+    margin: 95px 0 0 110px;
     background-color: @basic_white;
+    z-index: 2;
 
-    &__box {
-      padding: 0 30px;
-      min-height: auto;
-      margin: 60px 0 53px 0;
+    &--color {
       background-color: @basic_white;
     }
-
-    &__title {
-      font-size: 20px;
-      line-height: 26px;
-      margin-left: 40px;
-    }
-
-    &__address {
-      font-size: 16px;
-      line-height: 30px;
-      margin-right: 40px;
-      text-align: right;
-    }
-
-    &__map--img {
-      height: 400px;
-    }
-
-    &__map--google {
-      height: 400px;
-    }
   }
 
-  @media (min-width: @desktop-width) {
-    background-color: @basic_white;
+  .contacts__content {
+    margin-top: 10px;
+  }
 
-    &__box {
-      position: absolute;
-      box-sizing: border-box;
-      padding: 0 50px 0 35px;
-      width: 570px;
-      height: 200px;
-      margin: 100px 0 0 110px;
-      background-color: @basic_white;
-      z-index: 2;
-    }
+  .contacts__address {
+    text-align: left;
+    line-height: 20px;
+  }
 
-    &__address {
-      text-align: left;
-    }
+  .contacts__city {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: left;
+    margin: 15px 0 0 0;
   }
 }

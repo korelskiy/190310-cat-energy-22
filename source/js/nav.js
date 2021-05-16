@@ -1,7 +1,5 @@
 const burger = document.querySelector(".page-header__burger");
 const main_nav = document.querySelector(".main-nav");
-console.log(burger);
-console.log(main_nav);
 
 main_nav.classList.remove("main-nav--nojs");
 burger.classList.remove("page-header__burger--nojs");

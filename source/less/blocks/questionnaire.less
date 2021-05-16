@@ -1,116 +1,131 @@
-.questionnaire {
-  &__info {
-    margin: 0;
-    padding-left: 20px;
-    font-family: @special_font;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    color: @basic_black;
-    text-transform: uppercase;
-    text-align: left;
-    padding-bottom: 39px;
-  }
+.questionnaire__info {
+  margin: 0;
+  padding-left: 20px;
+  font-family: @special_font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: @basic_black;
+  text-transform: uppercase;
+  text-align: left;
+  padding-bottom: 39px;
+}
 
-  &__cat-info {
-    border: none;
-  }
+.questionnaire__cat-info {
+  border: none;
+}
 
-  &__programm {
-    padding: 0;
-    margin: 0;
-  }
+.questionnaire__programm {
+  padding: 0;
+  margin: 0;
+}
 
-  &__owner-contacts {
-    margin: 0;
-    padding: 0;
-    border: none;
-  }
+.questionnaire__owner-contacts {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 
-  &__addition {
-    padding: 0;
-    border: none;
-    margin: 0;
-  }
+.questionnaire__addition {
+  padding: 0;
+  border: none;
+  margin: 0;
+}
 
-  &__button {
+.questionnaire__button {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  border: none;
+}
+
+.questionnaire__footet {
+  padding: 0 20px;
+}
+
+.questionnaire__footnote {
+  margin-top: 21px;
+  margin-bottom: 32px;
+  color: @basic_black;
+  line-height: 16px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .questionnaire__info {
+    padding-left: 70px;
+    padding-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 768px;
     display: block;
     box-sizing: border-box;
     margin: 0 auto;
-    width: 100%;
-    height: 40px;
+  }
+
+  .questionnaire__footet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    align-items: center;
+    padding-left: 70px;
+    padding-right: 66px;
+    width: 630px;
+    margin: 0 auto 70px auto;
+  }
+
+  .questionnaire__button {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    height: 52px;
+    padding: 0 64px;
+    width: auto;
+  }
+
+  .questionnaire__footnote {
+    text-align: left;
+    margin: -4px 0 0 0;
     font-size: 16px;
-    line-height: 40px;
-    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .questionnaire__info {
+    padding-bottom: 67px;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 1440px;
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: 110px;
   }
 
-  &__footet {
-    padding: 0 20px;
+  .questionnaire__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    width: 1220px;
+    margin: 0 auto;
   }
 
-  &__footnote {
-    margin-top: 21px;
-    margin-bottom: 32px;
-    color: @basic_black;
-    line-height: 16px;
-    text-align: center;
+  .questionnaire__programm {
+    margin-right: 0;
   }
 
-  @media (min-width: @tablet-width) {
-    &__info {
-      padding-left: 70px;
-      padding-bottom: 66px;
-      font-size: 20px;
-      line-height: 30px;
-    }
-
-    &__footet {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 60px;
-      align-items: center;
-      padding-left: 70px;
-      padding-right: 66px;
-      margin-bottom: 70px;
-    }
-
-    &__button {
-      font-size: 20px;
-      line-height: 20px;
-      width: 282px;
-      height: 52px;
-    }
-
-    &__footnote {
-      text-align: left;
-      margin: 0;
-      font-size: 16px;
-    }
+  .questionnaire__footet {
+    column-gap: 80px;
+    padding: 0;
+    margin-bottom: 80px;
+    width: 1220px;
   }
 
-  @media (min-width: @desktop-width) {
-    &__info {
-      padding-left: 0;
-    }
-
-    &__box {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 80px;
-    }
-
-    &__programm {
-      margin-right: 0;
-    }
-
-    &__footet {
-      column-gap: 80px;
-      padding: 0;
-      margin-bottom: 80px;
-    }
-
-    &__button {
-      width: 100%;
-    }
+  .questionnaire__button {
+    width: 100%;
   }
 }

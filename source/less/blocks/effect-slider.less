@@ -1,136 +1,221 @@
 .effect-slider {
-  &__list {
-    margin: 0;
-    padding: 42px 0 0 0;
-    list-style: none;
-  }
+  margin-top: 42 px;
+}
 
-  &__item--off {
+.effect-slider__image {
+  &--off {
     display: none;
   }
+}
 
-  &__label {
-    font-family: @special_font;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: @basic_black;
-    background-color: @special_grey-2;
-    text-transform: uppercase;
-    border: none;
-    margin: 0 12px;
-    cursor: pointer;
+.effect-slider__label {
+  font-family: @special_font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: @basic_black;
+  background-color: @special_grey-2;
+  text-transform: uppercase;
+  border: none;
+  margin: 0 17px;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 1px solid @special_grey-2;
+
+  &:hover {
+    border-bottom: 1px solid fade(@basic_black, 40%);
   }
 
-  &__control {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 34px;
+  &:active {
+    border-bottom: 1px solid @special_grey-2;
   }
+}
 
-  &__range {
-    box-sizing: border-box;
-    width: 84px;
-    height: 14px;
-    background-color: @basic_white;
-    border: 1px solid @special_grey-5;
-    border-radius: 6px;
-    padding: 3px 5px 3px 5px;
-    cursor: pointer;
-  }
+.effect-slider__control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 34px;
+  height: auto;
+}
 
-  &__range--after {
+.effect-slider__range {
+  box-sizing: border-box;
+  width: 84px;
+  height: 14px;
+  background-color: @basic_white;
+  border: 1px solid @special_grey-5;
+  border-radius: 6px;
+  padding: 3px 5px 3px 5px;
+  cursor: pointer;
+
+  &--after {
     padding: 3px 5px 3px 43px;
   }
+}
 
-  &__toggle {
-    display: block;
-    width: 35px;
-    height: 6px;
-    background-color: @basic_green;
-    border-radius: 10px;
-    border: none;
+.effect-slider__toggle {
+  display: block;
+  width: 35px;
+  height: 6px;
+  background-color: @basic_green;
+  border-radius: 10px;
+  border: none;
+}
+
+.effect-slider__img {
+  display: block;
+  margin: 0 auto;
+  height: 232px;
+}
+
+@media (min-width: @tablet-width) {
+  .effect-slider {
+    padding: 0;
   }
 
-  &__img {
-    display: block;
-    margin: 0 auto;
-    height: 232px;
-  }
-
-  @media (min-width: @tablet-width) {
+  .effect-slider__control {
+    padding-bottom: 70px;
+    padding-top: 12px;
     background-color: @special_grey-2;
-    padding: 0 30px;
+  }
 
-    &__control {
-      padding-bottom: 70px;
-      padding-top: 17px;
+  .effect-slider__images {
+    display: flex;
+    margin: 0 auto;
+    width: 670px;
+    position: relative;
+    align-items: center;
+  }
+
+  .effect-slider__images-wrapper {
+    background: linear-gradient(to bottom, @basic_white 32%, @special_grey-2 32%);
+  }
+
+  .effect-slider__image {
+    margin: 0 auto;
+    height: 515px;
+    background: linear-gradient(to bottom, @basic_white 32%, @special_grey-2 32%);
+
+    &--after {
+      display: block;
+      position: relative;
+      margin: 0 40px 0 auto;
+      z-index: 1;
     }
 
-    &__list {
-      margin: 0 auto;
-      width: 670px;
-    }
-
-    &__img {
-      margin: -210px auto 0 auto;
-      height: 515px;
-      width: 100%;
-    }
-
-    &__label {
-      font-size: 20px;
-      line-height: 30px;
-      padding: 0;
-      border-bottom: 1px dotted @special_grey-3;
-      margin: 0 23px;
-    }
-
-    &__range {
-      width: 428px;
-      height: 6px;
-      border: none;
-      background-color: @special_grey-8;
-    }
-
-    &__toggle {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      padding: 4px;
-      margin: -16px auto 0 auto;
-      border: 12px solid @basic_white;
-      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
-      cursor: pointer;
+    &--before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 50%;
+      overflow: hidden;
     }
   }
 
-  @media (min-width: @desktop-width) {
+  .effect-slider__img {
+    height: 515px;
+    width: auto;
+  }
+
+  .effect-slider__label {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0;
+    margin: 0 23px;
+    border-bottom: 1px dotted @special_grey-3;
+
+    &:active {
+      border-bottom: 1px solid @basic_grey;
+    }
+  }
+
+  .effect-slider__range {
+    width: 428px;
+    height: 6px;
+    border: none;
+    background-color: @special_grey-8;
+  }
+
+  .effect-slider__toggle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    padding: 4px;
+    margin: -16px auto 0 auto;
+    border: 12px solid @basic_white;
+    box-shadow: 0 0 0 1px @special_grey-5;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    cursor: pointer;
+
+    &:hover {
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+    }
+
+    &:active {
+      box-shadow: 0 0 0 1px @basic_green;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .effect-slider {
+    background-color: none;
+    margin-top: -185px;
+    width: 650px;
+  }
+
+  .effect-slider__images-wrapper {
+    background-color: transparent;
+  }
+
+  .effect-slider__images {
+    background: linear-gradient(to bottom, @basic_white 185px, @special_grey-2 185px);
+  }
+
+  .effect-slider__image {
+    margin: 0 auto;
+    height: 536px;
+    background: none;
+
+    &--after {
+      display: block;
+      position: relative;
+      margin: 0 40px 0 auto;
+      z-index: 1;
+    }
+
+    &--before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 54%;
+      overflow: hidden;
+      background: linear-gradient(to bottom, @basic_white 185px, @basic_grey 185px);
+    }
+  }
+
+  .effect-slider__label {
     background-color: @basic_grey;
-    padding: 0 110px 0 0;
+    padding: 0;
 
-    &__label {
-      background-color: @basic_grey;
-      margin: 0 20px;
-      padding: 0;
+    &--before {
+      margin: 0 23px 0 0;
     }
 
-    &__control {
-      margin: 30px auto 0 auto;
+    &--after {
+      margin: 0 0 0 23px;
+      background-color: @special_grey-2;
     }
+  }
 
-    &__list {
-      width: 610px;
-      margin: 0 auto;
-    }
-
-    &__img {
-      margin: -240px auto 0 auto;
-      height: 515px;
-      width: 100%;
-      object-fit: contain;
-    }
+  .effect-slider__control {
+    margin: 0 auto 0 auto;
+    padding-top: 13px;
+    justify-content: flex-end;
+    background: linear-gradient(to right, @basic_grey 360px, @special_grey-2 360px);
   }
 }

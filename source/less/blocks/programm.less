@@ -3,117 +3,135 @@
   border-right: none;
   border-top: 1px solid @special_grey-3;
   border-bottom: 1px solid @special_grey-3;
+}
 
-  &__list {
-    margin: 30px 0 0 0;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-  }
+.programm__list {
+  margin: 30px 0 0 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
 
-  &__item {
+.programm__item {
+  padding-bottom: 24px;
+
+  &:last-child {
     padding-bottom: 24px;
   }
+}
 
-  &__item:last-child {
-    padding-bottom: 24px;
-  }
+.programm__input {
+  position: absolute;
+  appearance: none;
+}
 
-  &__input {
-    position: absolute;
-    appearance: none;
-  }
+.programm__checkbox {
+  position: absolute;
+  margin-left: -45px;
+  width: 13px;
+  height: 13px;
+  background-color: @basic_white;
+  border-radius: 50%;
+  border: 8px solid @basic_white;
+  box-shadow: 0 0 0 1px @special_grey-5;
+  cursor: pointer;
+}
 
-  &__checkbox {
-    position: absolute;
-    margin-left: -45px;
-    width: 13px;
-    height: 13px;
-    background-color: @basic_white;
-    border-radius: 50%;
-    border: 8px solid @basic_white;
-    box-shadow: 0 0 0 1px @special_grey-5;
-    cursor: pointer;
-  }
+.programm&__input:checked + .programm__checkbox {
+  background-color: @basic_green;
+}
 
-  &__input:checked + &__checkbox {
-    background-color: @basic_green;
-  }
+.programm__input:disabled + .programm__checkbox {
+  opacity: 0.3;
+}
 
-  &__input:disabled + &__checkbox {
-    opacity: 0.3;
-  }
+.programm__input:disabled + .programm__checkbox + .programm__text {
+  opacity: 0.3;
+}
 
-  &__input:disabled + &__checkbox + &__text {
-    opacity: 0.3;
-  }
+.programm__input:disabled:hover + .programm__checkbox {
+  box-shadow: 0 0 0 1px @special_grey-5;
+}
 
-  &__input:disabled:hover + &__checkbox {
-    box-shadow: 0 0 0 1px @special_grey-5;
-  }
+.programm__input:hover + .programm__checkbox {
+  box-shadow: 0 0 0 1px @special_grey-9;
+}
 
-  &__input:hover + &__checkbox {
-    box-shadow: 0 0 0 1px @special_grey-9;
-  }
+.programm__input:focus + .programm__checkbox {
+  box-shadow: 0 0 0 1px @special_dark-grey;
+}
 
-  &__input:focus + &__checkbox {
-    box-shadow: 0 0 0 1px @special_dark-grey;
-  }
+.programm__label {
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+}
 
-  &__label {
-    display: flex;
-    align-items: center;
-    padding-left: 45px;
-  }
+.programm__text {
+  font-family: @special_font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @special_dark-grey-2;
+  text-transform: uppercase;
+}
 
-  &__text {
-    font-family: @special_font;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    color: @special_dark-grey-2;
-    text-transform: uppercase;
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-left: 70px;
-    margin-right: 66px;
-    margin-bottom: 66px;
+@media (min-width: @tablet-width) {
+  .programm {
     border: 1px solid @special_grey-3;
-
-    &__text {
-      font-size: 20px;
-      line-height: 30px;
-    }
-
-    &__checkbox {
-      margin-left: -60px;
-      width: 18px;
-      height: 18px;
-      border: 10px solid @basic_white;
-    }
-
-    &__field {
-      margin-right: 36px;
-    }
-
-    &__item {
-      padding-bottom: 22px;
-      margin-left: 24px;
-    }
-
-    &__item:last-child {
-      padding-bottom: 29px;
-    }
+    width: 630px;
+    margin: 0 auto 66px auto;
   }
 
-  @media (min-width: @desktop-width) {
+  .programm__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .programm__list {
+    margin: 29px 0 0;
+    padding: 0 21px 0 21px;
+  }
+
+  .programm__checkbox {
+    margin-left: -60px;
+    width: 18px;
+    height: 18px;
+    border: 10px solid @basic_white;
+  }
+
+  .programm__field {
+    margin-right: 36px;
+  }
+
+  .programm__item {
+    padding-bottom: 22px;
+    margin-left: 24px;
+  }
+
+  .programm__item:last-child {
+    padding-bottom: 29px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programm {
     margin-left: 0;
     margin-right: 0;
+    width: 570px;
+  }
 
-    &__field {
-      margin-right: 0;
-    }
+  .programm__item {
+    padding-bottom: 24px;
+    margin-left: 23px;
+  }
+
+  .programm__list {
+    margin: 30px 0 0;
+  }
+
+  .programm__field {
+    margin-right: 0;
   }
 }
