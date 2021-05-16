@@ -1,7 +1,7 @@
 const btn_before = document.querySelector(".effect-slider__label--before");
 const btn_after = document.querySelector(".effect-slider__label--after");
-const img_after = document.querySelector(".effect-slider__image--before");
-const img_before = document.querySelector(".effect-slider__image--after");
+const img_after = document.querySelector(".effect-slider__image--after");
+const img_before = document.querySelector(".effect-slider__image--before");
 const range = document.querySelector(".effect-slider__range");
 
 btn_before.onclick = function() {
